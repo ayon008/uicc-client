@@ -2,20 +2,60 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+
+.bn-primary:hover {
+  @apply bg-deep-blue;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+.bn-secondary:hover {
+  @apply bg-orange text-white;
+}
+
+.icon:hover {
+  @apply bg-orange-1;
+}
+
+.bn-primary:hover {
+  background-color: #0B286D !important;
+}
+
+.bn-secondary:hover {
+  background-color: #E16710 !important;
+  color: white !important;
+}
+
+.icon:hover {
+  background-color: #FF8C3A !important;
+}
+
+.hover-text {
+  display: inline-block;
+}
+
+.hover-letter {
+  display: inline-block;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.hover-letter:hover {
+  animation: bounce 0.6s ease-in-out forwards;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
   }
-}
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  30% {
+    transform: translateY(-10px);
+  }
+
+  60% {
+    transform: translateY(5px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
 }

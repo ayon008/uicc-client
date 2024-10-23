@@ -10,7 +10,17 @@ module.exports = {
   ],
   theme: {
     extend: {
-
+      colors: {
+        'white-1': '#FBFCFF',
+        'blue': '#E8FFFE',
+        'gray': '#919191',
+        'gray-1': '#D3D3D3',
+        'orange': '#E16710',
+        'orange-1': '#FF8C3A',
+        'orange-light': '#FFB683',
+        'yellow': '#FFF900',
+        'deep-blue': '#0B286D',
+      },
     },
   },
   plugins: [require("daisyui")],
