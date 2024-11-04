@@ -25,7 +25,7 @@ export default function RootLayout({ children }) {
       <body
         className={`antialiased ${montserrat.className}`}
       >
-        <main className='max-w-[1440px] mx-auto min-h-screen'>
+        <main className='max-w-[1920px] mx-auto min-h-screen'>
           <Navbar />
           {children}
         </main>

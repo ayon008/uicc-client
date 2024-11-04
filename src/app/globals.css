@@ -28,34 +28,19 @@
   background-color: #FF8C3A !important;
 }
 
-.hover-text {
-  display: inline-block;
+.dropdown-icon:hover .dropdown-path {
+  stroke: #ff6347;
+  /* Change to your desired color */
 }
 
-.hover-letter {
-  display: inline-block;
-  transition: transform 0.3s ease;
-  cursor: pointer;
-}
-
-.hover-letter:hover {
-  animation: bounce 0.6s ease-in-out forwards;
-}
-
-@keyframes bounce {
-  0% {
-    transform: translateY(0);
-  }
-
-  30% {
-    transform: translateY(-10px);
-  }
-
-  60% {
-    transform: translateY(5px);
-  }
-
-  100% {
-    transform: translateY(0);
-  }
+.banner-image::before {
+  content: '';
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: rgb(0, 0, 0, 0.4);
+  backdrop-filter: blur(2px);
+  position: absolute;
 }
