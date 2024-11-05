@@ -56,7 +56,7 @@ const Navbar = () => {
                     <span tabIndex={0} role="button">Education</span>
                     <DropDown />
                 </div>
-                <ul tabIndex={0} className="dropdown-content menu bg-[#FBFCFF] z-[1] w-64 pb-2 pt-[40px] px-2 -left-8">
+                <ul tabIndex={0} className="dropdown-content menu bg-[#FBFCFF] z-[1] xl:w-64 2xl:w-72 pb-2 pt-[40px] px-2 -left-8">
                     <li>
                         <Link href="" className='uppercase font-semibold 2xl:text-xl xl:text-base'>IELTS</Link>
                     </li>
@@ -100,7 +100,7 @@ const Navbar = () => {
                 <div className='nav-end flex items-center gap-12 pe-6'>
                     <div className='flex items-center gap-2'>
                         <FaLocation />
-                        <p className='text-white font-normal text-sm hover:text-deep-blue transition-colors duration-500 cursor-pointer'>87, BNS Center, Sector-7, Uttara, Dhaka-1230</p>
+                        <p className='text-white font-normal text-sm hover:text-deep-blue transition-colors duration-500 cursor-pointer'>87, BNS Center, Sector-7, Uttara, Dhaka-1230 (Level-10)</p>
                     </div>
                     <div className='flex items-center gap-2'>
                         <FaEmail />
@@ -136,7 +136,7 @@ const Navbar = () => {
                             </div>
                         </div>
                         <div class="w-fit ml-auto pr-11">
-                            <ul class="flex items-center justify-between 2xl:gap-8 xl:gap-6">
+                            <ul class="flex navItems items-center justify-between 2xl:gap-8 xl:gap-6">
                                 {
                                     navItems
                                 }

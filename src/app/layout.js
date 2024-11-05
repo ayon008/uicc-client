@@ -1,6 +1,7 @@
 import { Montserrat } from 'next/font/google'
 import "./globals.css";
 import Navbar from '@/shared/Navbar';
+import Footer from '@/shared/Footer';
 
 
 export const metadata = {
@@ -28,6 +29,7 @@ export default function RootLayout({ children }) {
         <main className='max-w-[1920px] mx-auto min-h-screen'>
           <Navbar />
           {children}
+          <Footer />
         </main>
       </body>
     </html>
