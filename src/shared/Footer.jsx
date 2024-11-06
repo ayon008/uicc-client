@@ -11,7 +11,7 @@ import ButtonSecondary from '@/Components/ButtonSecondary';
 
 const Footer = () => {
     return (
-        <div>
+        <div className='2xl:mt-40 xl:mt-32 mt-16'>
             <div className='footer-main 2xl:pt-12 2xl:px-12 xl:pt-8 xl:px-8'>
                 <div className=''>
                     <div className='bg-orange flex flex-col h-full rounded-lg'>

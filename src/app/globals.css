@@ -101,3 +101,114 @@
   inset: 0;
   z-index: -1;
 }
+
+.dream::before {
+  content: '';
+  position: absolute;
+  background-color: #E16710 !important;
+  height: 7px;
+  width: 100%;
+  bottom: -4px;
+  left: 0;
+  right: 0;
+  border-radius: 4px;
+}
+
+.date::before {
+  content: '';
+  position: absolute;
+  background-color: #E16710 !important;
+  height: 2px;
+  width: 27px;
+  left: -27px;
+  top: 50%;
+  transform: translate(-50%);
+  /* bottom: -4px;
+  left: 0;
+  right: 0; */
+  border-radius: 4px;
+}
+
+.news {
+  border-radius: 40px;
+  background: var(--333, linear-gradient(180deg, #0B286D 0%, #0F172A 100%));
+}
+
+.collapse {
+  border-radius: 12px;
+  box-shadow: 0px 0px 12px 2px rgba(0, 0, 0, 0.05);
+}
+
+.icon-container {
+  display: flex;
+  align-items: center;
+}
+
+input:checked~.collapse-title .icon-plus {
+  display: none;
+}
+
+input:checked~.collapse-title .icon-minus {
+  display: block;
+}
+
+input:not(:checked)~.collapse-title .icon-minus {
+  display: none;
+}
+
+input:not(:checked)~.collapse-title .icon-plus {
+  display: block;
+}
+
+.custom-next,
+.custom-prev {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  border-radius: 50%;
+}
+
+.custom-next {
+  right: 50px;
+}
+
+.custom-prev {
+  left: 50px;
+}
+
+/* Hover effect */
+.custom-next:hover,
+.custom-prev:hover {
+  background-color: #333;
+  /* Darker background on hover */
+}
+
+.swiper-pagination {
+  position: absolute !important;
+  bottom: -10px;
+  left: 0px;
+  right: 0px;
+  z-index: 20;
+}
+
+.swiper {
+  position: relative !important;
+}
+
+.sliders {
+  position: relative !important;
+  padding-bottom: 60px;
+}
+
+.custom-pagination {
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 30;
+}
+
+.count {
+  background: var(--333, linear-gradient(180deg, #0B286D 0%, #0F172A 100%));
+}
