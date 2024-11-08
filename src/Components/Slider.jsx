@@ -4,6 +4,7 @@ import React, { useRef, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import slider1 from '../../public/assets/1135dacc92653527eec563091064a4a9.png'
 import slider2 from '../../public/assets/becca-tapert-GnY_mW1Q6Xc-unsplash.jpg'
+import { motion } from "framer-motion";
 // Import Swiper styles
 import 'swiper/css';
 // import 'swiper/css/pagination';
@@ -68,69 +69,65 @@ export default function Slider() {
                 </div>
             </Swiper>
             <div className="custom-pagination flex gap-4 justify-center mt-4">
-                <button onClick={() => goToSlide(0)} className="">
-                    {
-                        activeIndex === 0 ?
-                            <div className='p-3 rounded-full border border-[#ff8c3a]'>
-                                <div className='w-[10px] h-[10px] rounded-full bg-orange-1'>
+                <button className='' onClick={() => goToSlide(0)}>
+                    <motion.div
+                        initial={{ border: 'none', padding: 12 }}
+                        animate={{ border: activeIndex === 0 ? '1px solid #ff8c3a' : '1px solid #D3D3D3' }}
+                        transition={{ duration: 0.3, ease: "easeInOut", delay: 0.01 }}
+                        className='rounded-full'>
+                        <motion.div
+                            initial={{ backgroundColor: '#D3D3D3' }}
+                            animate={{ backgroundColor: activeIndex === 0 ? '#ff8c3a' : '#D3D3D3' }}
+                            transition={{ duration: 0.3, ease: "easeInOut", delay: 0.01 }}
+                            className='w-[10px] h-[10px] rounded-full'>
 
-                                </div>
-                            </div>
-                            :
-                            <div className='p-3 rounded-full'>
-                                <div className='w-[10px] h-[10px] rounded-full bg-[#D3D3D3]'>
-
-                                </div>
-                            </div>
-                    }
+                        </motion.div>
+                    </motion.div>
                 </button>
-                <button onClick={() => goToSlide(1)}>
-                    {
-                        activeIndex === 1 ?
-                            <div className='p-3 rounded-full border border-[#ff8c3a]'>
-                                <div className='w-[10px] h-[10px] rounded-full bg-orange-1'>
+                <button className='' onClick={() => goToSlide(1)}>
+                    <motion.div
+                        initial={{ border: 'none', padding: 12 }}
+                        animate={{ border: activeIndex === 1 ? '1px solid #ff8c3a' : '1px solid #D3D3D3' }}
+                        transition={{ duration: 0.3, ease: "easeInOut", delay: 0.01 }}
+                        className='rounded-full'>
+                        <motion.div
+                            initial={{ backgroundColor: '#D3D3D3' }}
+                            animate={{ backgroundColor: activeIndex === 1 ? '#ff8c3a' : '#D3D3D3' }}
+                            transition={{ duration: 0.3, ease: "easeInOut", delay: 0.01 }}
+                            className='w-[10px] h-[10px] rounded-full'>
 
-                                </div>
-                            </div>
-                            :
-                            <div className='p-3 rounded-full'>
-                                <div className='w-[10px] h-[10px] rounded-full bg-[#D3D3D3]'>
-
-                                </div>
-                            </div>
-                    }
+                        </motion.div>
+                    </motion.div>
                 </button>
-                <button onClick={() => goToSlide(2)}>
-                    {
-                        activeIndex === 2 ?
-                            <div className='p-3 rounded-full border border-[#ff8c3a]'>
-                                <div className='w-[10px] h-[10px] rounded-full bg-orange-1'>
+                <button className='' onClick={() => goToSlide(2)}>
+                    <motion.div
+                        initial={{ border: 'none', padding: 12 }}
+                        animate={{ border: activeIndex === 2 ? '1px solid #ff8c3a' : '1px solid #D3D3D3' }}
+                        transition={{ duration: 0.3, ease: "easeInOut", delay: 0.01 }}
+                        className='rounded-full'>
+                        <motion.div
+                            initial={{ backgroundColor: '#D3D3D3' }}
+                            animate={{ backgroundColor: activeIndex === 2 ? '#ff8c3a' : '#D3D3D3' }}
+                            transition={{ duration: 0.3, ease: "easeInOut", delay: 0.01 }}
+                            className='w-[10px] h-[10px] rounded-full'>
 
-                                </div>
-                            </div>
-                            :
-                            <div className='p-3 rounded-full'>
-                                <div className='w-[10px] h-[10px] rounded-full bg-[#D3D3D3]'>
-
-                                </div>
-                            </div>
-                    }
+                        </motion.div>
+                    </motion.div>
                 </button>
-                <button onClick={() => goToSlide(3)}>
-                    {
-                        activeIndex === 3 ?
-                            <div className='p-3 rounded-full border border-[#ff8c3a]'>
-                                <div className='w-[10px] h-[10px] rounded-full bg-orange-1'>
+                <button className='' onClick={() => goToSlide(3)}>
+                    <motion.div
+                        initial={{ border: 'none', padding: 12 }}
+                        animate={{ border: activeIndex === 3 ? '1px solid #ff8c3a' : '1px solid #D3D3D3' }}
+                        transition={{ duration: 0.3, ease: "easeInOut", delay: 0.01 }}
+                        className='rounded-full'>
+                        <motion.div
+                            initial={{ backgroundColor: '#D3D3D3' }}
+                            animate={{ backgroundColor: activeIndex === 3 ? '#ff8c3a' : '#D3D3D3' }}
+                            transition={{ duration: 0.3, ease: "easeInOut", delay: 0.01 }}
+                            className='w-[10px] h-[10px] rounded-full'>
 
-                                </div>
-                            </div>
-                            :
-                            <div className='p-3 rounded-full'>
-                                <div className='w-[10px] h-[10px] rounded-full bg-[#D3D3D3]'>
-
-                                </div>
-                            </div>
-                    }
+                        </motion.div>
+                    </motion.div>
                 </button>
             </div>
         </div>

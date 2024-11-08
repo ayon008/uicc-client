@@ -212,3 +212,9 @@ input:not(:checked)~.collapse-title .icon-plus {
 .count {
   background: var(--333, linear-gradient(180deg, #0B286D 0%, #0F172A 100%));
 }
+
+.vertical {
+  writing-mode: vertical-rl !important;
+  rotate: -180deg;
+
+}
