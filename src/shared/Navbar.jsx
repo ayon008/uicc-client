@@ -35,16 +35,16 @@ const Navbar = () => {
 
     const navItems = <>
         <li className="2xl:text-xl xl:text-base font-semibold hover:text-orange transition-all duration-100">
-            <Link href="/home">Home</Link>
+            <Link href="/">Home</Link>
         </li>
         <li className="2xl:text-xl xl:text-base font-semibold hover:text-orange transition-all duration-100">
             <Link href="/about">About</Link>
         </li>
         <li className="2xl:text-xl xl:text-base font-semibold hover:text-orange transition-all duration-100">
-            <Link href="/service">Service</Link>
+            <Link href="/services">Services</Link>
         </li>
         <li className="2xl:text-xl xl:text-base font-semibold hover:text-orange transition-all duration-100">
-            <Link href="/associate-universities">Associate Universities</Link>
+            <Link href="/universities">Associate Universities</Link>
         </li>
         {/* <li className="2xl:text-xl xl:text-base font-semibold dropdown-icon hover:text-orange transition-all duration-100 flex items-center cursor-pointer">
 
