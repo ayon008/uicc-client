@@ -5,6 +5,7 @@ import React from 'react';
 import image1 from '../../../public/assets/Image-80 (2).png'
 import { FaCheck } from 'react-icons/fa';
 import { ButtonTerTiary } from '../page';
+import BottomSection from '@/Components/BottomSection';
 
 
 const Card = () => {
@@ -60,6 +61,9 @@ const page = () => {
                         )
                     })
                 }
+            </div>
+            <div className='max-w-[1440px] mx-auto px-10'>
+                <BottomSection />
             </div>
         </div>
     );
