@@ -17,7 +17,7 @@ const page = () => {
                     <div className="h-full w-full">
                         <Image src={ielts} className="h-full object-cover" alt="" />
                     </div>
-                    <Services btn={true} heading={'IELTS'} subHeading={'IELTS Preparation'} text={'We offer specialized IELTS training programs that are designed to help students achieve the scores required for admission to international universities and professional qualifications.'} />
+                    <Services btn={true} heading={'IELTS'} href={'/ielts'} subHeading={'IELTS Preparation'} text={'We offer specialized IELTS training programs that are designed to help students achieve the scores required for admission to international universities and professional qualifications.'} />
                     <div className="h-full w-full">
                         <Image src={ielts} className="h-full object-cover" alt="" />
                     </div>

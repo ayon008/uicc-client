@@ -13,9 +13,11 @@ import { MdSearch } from 'react-icons/md';
 import Link from 'next/link';
 import DropDown from '@/icons/DrowDown';
 import { motion } from "framer-motion";
+import { usePathname } from 'next/navigation';
 
 const Navbar = () => {
     const [scrolled, setScrolled] = useState(false);
+    const pathname = usePathname();
     console.log(scrolled);
 
 
@@ -34,55 +36,35 @@ const Navbar = () => {
     }, []);
 
     const navItems = <>
-        <li className="2xl:text-xl xl:text-base font-semibold hover:text-orange transition-all duration-100">
+        <li className={`2xl:text-xl xl:text-base font-semibold hover:text-orange transition-all duration-100 ${pathname === '/' ? 'text-orange' : ''}`}>
             <Link href="/">Home</Link>
         </li>
-        <li className="2xl:text-xl xl:text-base font-semibold hover:text-orange transition-all duration-100">
+        <li className={`2xl:text-xl xl:text-base font-semibold hover:text-orange transition-all duration-100 ${pathname === '/about' ? 'text-orange' : ''}`}>
             <Link href="/about">About</Link>
         </li>
-        <li className="2xl:text-xl xl:text-base font-semibold hover:text-orange transition-all duration-100">
+        <li className={`2xl:text-xl xl:text-base font-semibold hover:text-orange transition-all duration-100 ${pathname === '/services' ? 'text-orange' : ''}`}>
             <Link href="/services">Services</Link>
         </li>
-        <li className="2xl:text-xl xl:text-base font-semibold hover:text-orange transition-all duration-100">
+        <li className={`2xl:text-xl xl:text-base font-semibold hover:text-orange transition-all duration-100 ${pathname === '/universities' ? 'text-orange' : ''}`}>
             <Link href="/universities">Associate Universities</Link>
         </li>
-        {/* <li className="2xl:text-xl xl:text-base font-semibold dropdown-icon hover:text-orange transition-all duration-100 flex items-center cursor-pointer">
-
-
-        </li> */}
         <li>
             <div className="dropdown dropdown-hover">
-                <div className='2xl:text-xl xl:text-base font-semibold dropdown-icon hover:text-orange transition-all duration-100 flex items-center cursor-pointer '>
+                <div className='2xl:text-xl xl:text-base font-semibold dropdown-icon hover:text-orange transition-all duration-100 flex items-center cursor-pointer'>
                     <span tabIndex={0} role="button">Education</span>
                     <DropDown />
                 </div>
-                <ul tabIndex={0} className="dropdown-content menu bg-[#FBFCFF] z-[1] xl:w-64 2xl:w-72 pb-2 pt-[40px] px-2 -left-8">
-                    <li>
-                        <Link href="" className='uppercase font-semibold 2xl:text-xl xl:text-base'>IELTS</Link>
-                    </li>
-                    <li>
-                        <Link href="" className='uppercase font-semibold 2xl:text-xl xl:text-base'>Korean Language</Link>
-                    </li>
-                    <li>
-                        <Link href="" className='uppercase font-semibold 2xl:text-xl xl:text-base'>Japanese Language</Link>
-                    </li>
-                    <li>
-                        <Link href="" className='uppercase font-semibold 2xl:text-xl xl:text-base'>German Language</Link>
-                    </li>
-                    <li>
-                        <Link href="" className='uppercase font-semibold 2xl:text-xl xl:text-base'>Chinese Language</Link>
-                    </li>
+                <ul tabIndex={0} className="dropdown-content menu bg-[#FBFCFF] z-[1] xl:w-64 2xl:w-72 pb-2 pt-[40px] px-2 top-5 -left-8">
+                    <li><Link href="/ielts" className='uppercase font-semibold 2xl:text-xl xl:text-base'>IELTS</Link></li>
+                    <li><Link href="" className='uppercase font-semibold 2xl:text-xl xl:text-base'>Korean Language</Link></li>
+                    <li><Link href="" className='uppercase font-semibold 2xl:text-xl xl:text-base'>Japanese Language</Link></li>
+                    <li><Link href="" className='uppercase font-semibold 2xl:text-xl xl:text-base'>German Language</Link></li>
+                    <li><Link href="" className='uppercase font-semibold 2xl:text-xl xl:text-base'>Chinese Language</Link></li>
                 </ul>
             </div>
         </li>
-        <li className="2xl:text-xl xl:text-base font-semibold hover:text-orange transition-all duration-100">
+        <li className={`2xl:text-xl xl:text-base font-semibold hover:text-orange transition-all duration-100 ${pathname === '/contact' ? 'text-orange' : ''}`}>
             <Link href="/contact">Contact</Link>
-        </li>
-        <li>
-            <button className="rounded-[30px] flex items-center btn text-white bg-orange 2xl:text-lg xl:text-base">
-                <MdSearch size={24} color="white" />
-                <span>Search</span>
-            </button>
         </li>
     </>
 
@@ -129,18 +111,27 @@ const Navbar = () => {
             </div>
             <div className='absolute top-[60px] inset-0'>
                 <div className='bg-[#FBFCFF]'>
-                    <div className='flex items-center justify-between  max-w-[1440px] mx-auto relative h-[100px] 2xl:py-10 xl:py-10'>
+                    <div className='flex items-center justify-between  max-w-[1440px] mx-auto relative h-[100px] 2xl:py-10 xl:py-10 px-11'>
                         <div className='absolute top-0 left-11'>
                             <div className='nav-start'>
                                 <Image className='w-[275px] h-[125px]' src={logo} alt='logo' />
                             </div>
                         </div>
-                        <div class="w-fit ml-auto pr-11">
+                        <div className='w-[275px] h-full'>
+
+                        </div>
+                        <div class="w-fit">
                             <ul class="flex navItems items-center justify-between 2xl:gap-8 xl:gap-6">
                                 {
                                     navItems
                                 }
                             </ul>
+                        </div>
+                        <div className='w-fit'>
+                            <button className="rounded-[30px] flex items-center btn text-white bg-orange 2xl:text-lg xl:text-base">
+                                <MdSearch size={24} color="white" />
+                                <span>Search</span>
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -151,18 +142,27 @@ const Navbar = () => {
                 transition={{ duration: 0.5, ease: "easeInOut", delay: 0.01 }}
                 className={`h-[100px] bg-[#FBFCFF] shadow-xl fixed right-0 left-0 z-50`}
             >
-                <div className='max-w-[1440px] mx-auto h-full flex items-center justify-between relative 2xl:py-10 xl:py-10'>
+                <div className='max-w-[1440px] mx-auto h-full flex items-center justify-between relative 2xl:py-10 xl:py-10 px-11'>
                     <div className='absolute top-0 left-11'>
                         <div className='nav-start'>
                             <Image className='w-[275px] h-[125px]' src={logo} alt='logo' />
                         </div>
                     </div>
-                    <div class="w-fit ml-auto pr-11">
+                    <div className='w-[275px] h-full'>
+
+                    </div>
+                    <div class="w-fit">
                         <ul class="flex navItems items-center justify-between 2xl:gap-8 xl:gap-6">
                             {
                                 navItems
                             }
                         </ul>
+                    </div>
+                    <div className='w-fit'>
+                        <button className="rounded-[30px] flex items-center btn text-white bg-orange 2xl:text-lg xl:text-base">
+                            <MdSearch size={24} color="white" />
+                            <span>Search</span>
+                        </button>
                     </div>
                 </div>
             </motion.div>

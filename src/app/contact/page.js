@@ -56,7 +56,9 @@ const page = () => {
                     </div>
                 </div>
             </div>
-            <SectionTitle heading={'Committed to arrange your first business consultation totally free of cost'} subHeading={'Drop Us a Line'} width={true} />
+            <div className='w-3/4 mx-auto'>
+                <SectionTitle heading={'Committed to arrange your first business consultation totally free of cost'} subHeading={'Drop Us a Line'} width={true} />
+            </div>
             <ContacatForm />
             <BottomSection />
         </div>
