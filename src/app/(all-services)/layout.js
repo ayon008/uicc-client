@@ -1,12 +1,13 @@
 'use client'
 import { Montserrat } from 'next/font/google'
-import "../globals.css";
+import '../globals.css'
 import Link from 'next/link';
 import image from '@/../public/assets/Frame 63.png'
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import ServiceBanner from '@/Components/ServiceBanner';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { useRouter } from 'next/navigation';
 
 const links = [
     {
@@ -44,9 +45,9 @@ const links = [
         name: 'Air Ticket',
         href: '/air-ticket',
         subArray: [
-            { name: 'One-Way Ticket', href: '/air-ticket/one-way-ticket' },
-            { name: 'Round Trip', href: '/air-ticket/round-trip' },
-            { name: 'Business Class', href: '/air-ticket/business-class' }
+            // { name: 'One-Way Ticket', href: '/air-ticket/one-way-ticket' },
+            // { name: 'Round Trip', href: '/air-ticket/round-trip' },
+            // { name: 'Business Class', href: '/air-ticket/business-class' }
         ]
     },
     {
@@ -145,66 +146,83 @@ export const State = (path) => {
 
 export default function RootLayout({ children }) {
     const [show, setShow] = useState(false);
-    const text = State('/air-ticket') ? 'Air Ticket' : State('/ielts') ? <span>IELTS<br />Programme</span> : '';
+    const router = useRouter();
+    const text = State('/air-ticket') ? 'Air Ticket' : State('/ielts') ? <span style={{ lineHeight: '60px' }}>IELTS<br />Programme</span> : State('/student-visa') ? <span>Student Visa<br />Services</span> : State('/tourist-visa') ? 'Tourist Visa' : State('/worker-visa') ? <span>Worker Visa<br />Services</span> : State('/family-visa') ? 'Family Visa' : State('/japanese-language') ? <span style={{ lineHeight: '60px' }}>Japanese<br />Language</span> : State('/korean-language') ? <span style={{ lineHeight: '60px' }}>Korean<br />Language</span> : '';
 
     return (
-        <div
-            className={`antialiased ${montserrat.className}`}
-        >
-            {/* {
+        <div className='relative'>
+            <div
+                className={`antialiased ${montserrat.className}`}
+            >
+                {/* {
                 show &&
                 <div className='absolute bg-red-500 inset-0'>
                     A
                 </div>
             } */}
-            <ServiceBanner text={text} />
-            <div className='max-w-[1440px] mx-auto px-11 py-16'>
-                <div className='tabs items-start gap-10' style={{ display: 'grid', gridTemplateColumns: '1fr 2fr' }}>
-                    <div>
-                        <ul className='space-y-4'>
-                            {
-                                links.map((link, i) => {
-                                    return (
-                                        <li key={i} onClick={() => setShow(true)} className={`dropdown dropdown-right w-full`}>
-                                            <div tabIndex={0} role="button"
-                                                className={`rounded-xl p-6 ${State(link.href) ? 'bg-orange text-white' : 'bg-white text-black'} flex items-center justify-between`} style={{
-                                                    boxShadow: "0px 0px 8px 4px rgba(0, 0, 0, 0.05)"
-                                                }}
-                                            >
-                                                <div className="flex items-center gap-4">
-                                                    {State(link.href) ? <WhiteIcon /> : <Icon />}
-                                                    <span className='2xl:text-2xl xl:text-xl font-medium'>{link.name}</span>
+                <ServiceBanner text={text} />
+                <div className='max-w-[1440px] mx-auto px-11 py-16'>
+                    <div className='tabs items-start gap-10' style={{ display: 'grid', gridTemplateColumns: '1fr 2fr' }}>
+                        <div>
+                            <ul className='space-y-4'>
+                                {
+                                    links.map((link, i) => {
+                                        return (
+                                            <li key={i} onClick={() => {
+                                                if (link.subArray.length <= 0) {
+                                                    router.push(`${link.href}`)
+                                                }
+                                                setShow(true)
+                                            }} className={`dropdown dropdown-right w-full`}>
+                                                <div tabIndex={0} role="button"
+                                                    className={`rounded-xl p-6 ${State(link.href) ? 'bg-orange text-white' : 'bg-white text-black'} flex items-center justify-between`} style={{
+                                                        boxShadow: "0px 0px 8px 4px rgba(0, 0, 0, 0.05)"
+                                                    }}
+                                                >
+                                                    <div className="flex items-center gap-4">
+                                                        {State(link.href) ? <WhiteIcon /> : <Icon />}
+                                                        <span className='2xl:text-2xl xl:text-xl font-medium'>{link.name}</span>
+                                                    </div>
+                                                    {
+                                                        link?.subArray?.length > 0 &&
+                                                        (
+                                                            State(link.href)
+                                                                ?
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                                    <path d="M7.98877 3.49981C7.85792 3.63375 7.78467 3.81356 7.78467 4.00081C7.78467 4.18805 7.85792 4.36787 7.98877 4.50181L15.2983 12.0003L7.98877 19.4973C7.85792 19.6312 7.78467 19.8111 7.78467 19.9983C7.78467 20.1856 7.85792 20.3654 7.98877 20.4993C8.05236 20.5646 8.12839 20.6165 8.21238 20.652C8.29637 20.6874 8.38661 20.7057 8.47777 20.7057C8.56893 20.7057 8.65916 20.6874 8.74315 20.652C8.82714 20.6165 8.90317 20.5646 8.96677 20.4993L16.7398 12.5238C16.8763 12.3837 16.9527 12.1959 16.9527 12.0003C16.9527 11.8047 16.8763 11.6169 16.7398 11.4768L8.96677 3.50131C8.90317 3.43599 8.82714 3.38408 8.74315 3.34863C8.65916 3.31318 8.56893 3.29492 8.47777 3.29492C8.38661 3.29492 8.29637 3.31318 8.21238 3.34863C8.12839 3.38408 8.05236 3.43599 7.98877 3.50131V3.49981Z" fill="white" />
+                                                                </svg> :
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                                    <path d="M7.98925 3.4995C7.85841 3.63344 7.78516 3.81326 7.78516 4.0005C7.78516 4.18775 7.85841 4.36756 7.98925 4.5015L15.2988 12L7.98925 19.497C7.85841 19.6309 7.78516 19.8108 7.78516 19.998C7.78516 20.1852 7.85841 20.3651 7.98925 20.499C8.05285 20.5643 8.12888 20.6162 8.21287 20.6517C8.29686 20.6871 8.38709 20.7054 8.47825 20.7054C8.56941 20.7054 8.65965 20.6871 8.74364 20.6517C8.82763 20.6162 8.90366 20.5643 8.96725 20.499L16.7403 12.5235C16.8768 12.3834 16.9532 12.1956 16.9532 12C16.9532 11.8044 16.8768 11.6166 16.7403 11.4765L8.96725 3.501C8.90366 3.43569 8.82763 3.38377 8.74364 3.34833C8.65965 3.31288 8.56941 3.29462 8.47825 3.29462C8.38709 3.29462 8.29686 3.31288 8.21287 3.34833C8.12888 3.38377 8.05285 3.43569 7.98925 3.501V3.4995Z" fill="#919191" />
+                                                                </svg>
+                                                        )
+                                                    }
                                                 </div>
                                                 {
-                                                    State(link.href) ? <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                                        <path d="M7.98877 3.49981C7.85792 3.63375 7.78467 3.81356 7.78467 4.00081C7.78467 4.18805 7.85792 4.36787 7.98877 4.50181L15.2983 12.0003L7.98877 19.4973C7.85792 19.6312 7.78467 19.8111 7.78467 19.9983C7.78467 20.1856 7.85792 20.3654 7.98877 20.4993C8.05236 20.5646 8.12839 20.6165 8.21238 20.652C8.29637 20.6874 8.38661 20.7057 8.47777 20.7057C8.56893 20.7057 8.65916 20.6874 8.74315 20.652C8.82714 20.6165 8.90317 20.5646 8.96677 20.4993L16.7398 12.5238C16.8763 12.3837 16.9527 12.1959 16.9527 12.0003C16.9527 11.8047 16.8763 11.6169 16.7398 11.4768L8.96677 3.50131C8.90317 3.43599 8.82714 3.38408 8.74315 3.34863C8.65916 3.31318 8.56893 3.29492 8.47777 3.29492C8.38661 3.29492 8.29637 3.31318 8.21238 3.34863C8.12839 3.38408 8.05236 3.43599 7.98877 3.50131V3.49981Z" fill="white" />
-                                                    </svg> : <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                                        <path d="M7.98925 3.4995C7.85841 3.63344 7.78516 3.81326 7.78516 4.0005C7.78516 4.18775 7.85841 4.36756 7.98925 4.5015L15.2988 12L7.98925 19.497C7.85841 19.6309 7.78516 19.8108 7.78516 19.998C7.78516 20.1852 7.85841 20.3651 7.98925 20.499C8.05285 20.5643 8.12888 20.6162 8.21287 20.6517C8.29686 20.6871 8.38709 20.7054 8.47825 20.7054C8.56941 20.7054 8.65965 20.6871 8.74364 20.6517C8.82763 20.6162 8.90366 20.5643 8.96725 20.499L16.7403 12.5235C16.8768 12.3834 16.9532 12.1956 16.9532 12C16.9532 11.8044 16.8768 11.6166 16.7403 11.4765L8.96725 3.501C8.90366 3.43569 8.82763 3.38377 8.74364 3.34833C8.65965 3.31288 8.56941 3.29462 8.47825 3.29462C8.38709 3.29462 8.29686 3.31288 8.21287 3.34833C8.12888 3.38377 8.05285 3.43569 7.98925 3.501V3.4995Z" fill="#919191" />
-                                                    </svg>
+                                                    link?.subArray?.length > 0 &&
+                                                    <ul tabIndex={0} className="dropdown-content menu bg-base-100 rounded-box w-full z-[1] px-8 py-6 shadow-2xl space-y-4 ml-4">
+                                                        {
+                                                            link?.subArray.map((item, i) => {
+                                                                return (
+                                                                    <Link key={i} href={item.href}>
+                                                                        <li className='text-xl font-normal cursor-pointer' key={i}>
+                                                                            {item.name}
+                                                                        </li>
+                                                                    </Link>
+                                                                )
+                                                            })
+                                                        }
+                                                    </ul>
                                                 }
-                                            </div>
-                                            <ul tabIndex={0} className="dropdown-content menu bg-base-100 rounded-box w-full z-[1] px-8 py-6 shadow-2xl space-y-4 ml-4">
-                                                {
-                                                    link?.subArray.map((item, i) => {
-                                                        return (
-                                                            <Link key={i} href={item.href}>
-                                                                <li className='text-xl font-normal cursor-pointer' key={i}>
-                                                                    {item.name}
-                                                                </li>
-                                                            </Link>
-                                                        )
-                                                    })
-                                                }
-                                            </ul>
-                                        </li>
-                                    )
-                                })
-                            }
-                        </ul>
-                        <Image className='mt-10 max-h-[500px]' src={image} alt='' />
-                    </div>
-                    <div>
-                        {children}
+                                            </li>
+                                        )
+                                    })
+                                }
+                            </ul>
+                            <Image className='mt-10 max-h-[500px]' src={image} alt='' />
+                        </div>
+                        <div>
+                            {children}
+                        </div>
                     </div>
                 </div>
             </div>
