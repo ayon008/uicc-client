@@ -147,7 +147,7 @@ export const State = (path) => {
 export default function RootLayout({ children }) {
     const [show, setShow] = useState(false);
     const router = useRouter();
-    const text = State('/air-ticket') ? 'Air Ticket' : State('/ielts') ? <span style={{ lineHeight: '60px' }}>IELTS<br />Programme</span> : State('/student-visa') ? <span>Student Visa<br />Services</span> : State('/tourist-visa') ? 'Tourist Visa' : State('/worker-visa') ? <span>Worker Visa<br />Services</span> : State('/family-visa') ? 'Family Visa' : State('/japanese-language') ? <span style={{ lineHeight: '60px' }}>Japanese<br />Language</span> : State('/korean-language') ? <span style={{ lineHeight: '60px' }}>Korean<br />Language</span> : '';
+    const text = State('/air-ticket') ? 'Air Ticket' : State('/ielts') ? <span style={{ lineHeight: '60px' }}>IELTS<br />Programme</span> : State('/student-visa') ? <span>Student Visa<br />Services</span> : State('/tourist-visa') ? 'Tourist Visa' : State('/worker-visa') ? <span>Worker Visa<br />Services</span> : State('/family-visa') ? 'Family Visa' : State('/japanese-language') ? <span style={{ lineHeight: '60px' }}>Japanese<br />Language</span> : State('/korean-language') ? <span style={{ lineHeight: '60px' }}>Korean<br />Language</span> : State('/air-ticket') ? 'AIR TICKET' : State('/language-training') ? <span style={{ lineHeight: '60px' }}>Language<br />Training</span> : '';
 
     return (
         <div className='relative'>

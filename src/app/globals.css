@@ -272,3 +272,22 @@ textarea {
 .list-item-dash li::before {
   content: '- ';
 }
+
+.singIn {
+  background: linear-gradient(0deg, rgba(15, 23, 42, 0.70) 0%, rgba(15, 23, 42, 0.70) 100%), url('../../public/assets/ad07a74059db743be3df30fd24fa2814.png') lightgray 50% / cover no-repeat;
+}
+
+.signInForm {
+  border-radius: 24px;
+  border: 1px solid var(--Color-White-Shade-1, #FFF);
+  background: rgba(255, 255, 255, 0.10);
+  backdrop-filter: blur(20px);
+}
+
+.email,
+.password {
+  border-radius: 20px;
+  border: 0.5px solid var(--333, #0B286D);
+  background: var(--Color-White-Shade-1, #FFF);
+  padding: 12px 24px;
+}
