@@ -59,7 +59,7 @@ const Navbar = () => {
                     <li><Link href="/korean-language/korean-regular-batch" className='uppercase font-semibold 2xl:text-xl xl:text-base'>Korean Language</Link></li>
                     <li><Link href="/japanese-language/japanese-language-course-n5" className='uppercase font-semibold 2xl:text-xl xl:text-base'>Japanese Language</Link></li>
                     <li><Link href="/german-language/basic-german" className='uppercase font-semibold 2xl:text-xl xl:text-base'>German Language</Link></li>
-                    <li><Link href="/chinese-language/basic-chinese" className='uppercase font-semibold 2xl:text-xl xl:text-base'>Chinese Language</Link></li>
+                    <li><Link href="" className='uppercase font-semibold 2xl:text-xl xl:text-base'>Chinese Language</Link></li>
                 </ul>
             </div>
         </li>
