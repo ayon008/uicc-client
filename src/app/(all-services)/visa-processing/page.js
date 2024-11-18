@@ -163,7 +163,7 @@ const Page = () => {
                     </li>
                 </ul>
                 <p className='2xl:text-2xl xl:text-xl font-semibold mt-16'>
-                    By choosing International Career Council's visa processing service, you benefit from personalized support, expert guidance, and a dedicated team that makes visa application stress-free. For more details
+                    By choosing International Career Council&apos;s visa processing service, you benefit from personalized support, expert guidance, and a dedicated team that makes visa application stress-free. For more details
                 </p>
             </div>
         </div >
