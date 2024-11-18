@@ -13,7 +13,7 @@ const Page = () => {
             <div>
                 <h1 className='2xl:text-5xl xl:text-4xl font-semibold'>Career Counseling at UICC</h1>
                 <p className='2xl:text-xl xl:text-lg font-normal mt-6'>
-                    International Career Council at Uttara offers *comprehensive career counseling services* to help individuals identify their passions, skills, and opportunities to excel in their chosen fields. Whether you're a student, job seeker, or professional looking to pivot, our expert counselors provide personalized guidance tailored to your needs and goals.
+                    International Career Council at Uttara offers *comprehensive career counseling services* to help individuals identify their passions, skills, and opportunities to excel in their chosen fields. Whether you&apos;re a student, job seeker, or professional looking to pivot, our expert counselors provide personalized guidance tailored to your needs and goals.
                 </p>
                 <h2 className='2xl:text-5xl xl:text-4xl font-semibold my-10'>
                     Career Assessment and Planning
