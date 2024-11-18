@@ -6,7 +6,7 @@ import image from '@/../public/assets/Frame 63.png'
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import ServiceBanner from '@/Components/ServiceBanner';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 
 const links = [
@@ -152,10 +152,10 @@ export const State = (path) => {
 export default function RootLayout({ children }) {
     const [show, setShow] = useState(false);
     const router = useRouter();
-    const text = State('/air-ticket') ? 'Air Ticket' : State('/ielts') ? <span style={{ lineHeight: '60px' }}>IELTS<br />Programme</span> : State('/student-visa') ? <span>Student Visa<br />Services</span> : State('/tourist-visa') ? 'Tourist Visa' : State('/worker-visa') ? <span>Worker Visa<br />Services</span> : State('/family-visa') ? 'Family Visa' : State('/japanese-language') ? <span style={{ lineHeight: '60px' }}>Japanese<br />Language</span> : State('/korean-language') ? <span style={{ lineHeight: '60px' }}>Korean<br />Language</span> : State('/air-ticket') ? 'AIR TICKET' : State('/language-training') ? <span style={{ lineHeight: '60px' }}>Language<br />Training</span> : '';
+    const text = State('/air-ticket') ? 'Air Ticket' : State('/ielts') ? <span style={{ lineHeight: '60px' }}>IELTS<br />Programme</span> : State('/student-visa') ? <span>Student Visa<br />Services</span> : State('/tourist-visa') ? 'Tourist Visa' : State('/worker-visa') ? <span>Worker Visa<br />Services</span> : State('/family-visa') ? 'Family Visa' : State('/japanese-language') ? <span style={{ lineHeight: '60px' }}>Japanese<br />Language</span> : State('/korean-language') ? <span style={{ lineHeight: '60px' }}>Korean<br />Language</span> : State('/air-ticket') ? 'AIR TICKET' : State('/language-training') ? <span style={{ lineHeight: '60px' }}>Language<br />Training</span> : State('/career-counseling') ? <span style={{ lineHeight: '60px' }}>CAREER<br />COUNSELLING</span> : '';
 
     return (
-        <div className='relative'>
+        <div className='relative min-h-screen'>
             <div
                 className={`antialiased ${montserrat.className}`}
             >

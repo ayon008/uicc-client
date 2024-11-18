@@ -29,7 +29,7 @@ const page = () => {
                     <div className="h-full w-full">
                         <Image src={ielts} className="h-full object-cover" alt="" />
                     </div>
-                    <Services btn={true} heading={'Visa'} subHeading={'Visa Processing'} text={'We are passionate about helping students pursue their academic dreams abroad. Our *Visa Services* are designed to guide you through the entire visa process, from choosing the right program and destination.'} />
+                    <Services btn={true} heading={'Visa'} href={'/visa-processing'} subHeading={'Visa Processing'} text={'We are passionate about helping students pursue their academic dreams abroad. Our *Visa Services* are designed to guide you through the entire visa process, from choosing the right program and destination.'} />
                 </div>
             </div>
             <BottomSection />

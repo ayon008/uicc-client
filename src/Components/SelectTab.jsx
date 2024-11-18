@@ -122,10 +122,10 @@ const SelectTab = () => {
                     <Link href={'/language-training'} className={`border-deep-blue text-deep-blue cursor-pointer 2xl:py-6 xl:py-4 text-center border-2 bg-white font-semibold 2xl:text-2xl xl:text-lg`} >
                         Language Training
                     </Link>
-                    <Link href={''} className={`border-deep-blue text-deep-blue cursor-pointer 2xl:py-6 xl:py-4 text-center border-2 bg-white font-semibold 2xl:text-2xl xl:text-lg`} >
+                    <Link href={'/career-counseling'} className={`border-deep-blue text-deep-blue cursor-pointer 2xl:py-6 xl:py-4 text-center border-2 bg-white font-semibold 2xl:text-2xl xl:text-lg`} >
                         Career Counseling
                     </Link>
-                    <Link href={''} className={`border-deep-blue text-deep-blue cursor-pointer 2xl:py-6 xl:py-4 text-center border-2 bg-white font-semibold 2xl:text-2xl xl:text-lg`} >
+                    <Link href={'/visa-processing'} className={`border-deep-blue text-deep-blue cursor-pointer 2xl:py-6 xl:py-4 text-center border-2 bg-white font-semibold 2xl:text-2xl xl:text-lg`} >
                         Visa Processing
                     </Link>
                     <Link href={'/air-ticket'} className={`border-deep-blue text-deep-blue cursor-pointer 2xl:py-6 xl:py-4 text-center border-2 bg-white font-semibold 2xl:text-2xl xl:text-lg`} >

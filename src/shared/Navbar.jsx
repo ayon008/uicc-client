@@ -82,7 +82,7 @@ const Navbar = () => {
                 <div className='nav-end flex items-center gap-12 pe-6'>
                     <div className='flex items-center gap-2'>
                         <FaLocation />
-                        <p className='text-white font-normal text-sm hover:text-deep-blue transition-colors duration-500 cursor-pointer'>87, BNS Center, Sector-7, Uttara, Dhaka-1230 (Level-10)</p>
+                        <p className='text-white font-normal text-sm hover:text-deep-blue transition-colors duration-500 cursor-pointer'>87, BNS Center (Level-10), Sector-7, Uttara, Dhaka-1230</p>
                     </div>
                     <div className='flex items-center gap-2'>
                         <FaEmail />

@@ -34,7 +34,7 @@ const Footer = () => {
                             <div>
                                 <div className='flex items-center gap-2'>
                                     <FaLocation />
-                                    <p className='text-white font-normal text-sm hover:text-deep-blue transition-colors duration-500 cursor-pointer'>87, BNS Center, Sector-7, Uttara, Dhaka-1230 (Level-10)</p>
+                                    <p className='text-white font-normal text-sm hover:text-deep-blue transition-colors duration-500 cursor-pointer'>87, BNS Center (Level-10), Sector-7, Uttara, Dhaka-1230</p>
                                 </div>
                             </div>
                             <div className='w-[1px] bg-white h-[32px] rounded-lg'>
@@ -59,7 +59,7 @@ const Footer = () => {
                         </div>
                         <div className='w-full h-[1px] bg-white 2xl:my-6 xl:my-4'></div>
                         <div>
-                            <ButtonSecondary text={'Get Consultancy'} />
+                            <ButtonSecondary text={'Register Now'} />
                         </div>
                     </aside>
                     <nav>

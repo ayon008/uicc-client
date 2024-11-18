@@ -91,8 +91,20 @@ const ContactForm = () => {
                     />
                     {errors.email && <p className="text-red-500 text-sm">{errors.email.message}</p>}
                 </div>
-
                 <div className="form-control">
+                    <label className="label">
+                        <span className="label-text text-base font-semibold">Phone Number</span>
+                    </label>
+                    <input
+                        type="tel"
+                        placeholder="Phone Number"
+                        {...register("tel", { required: "phone is required" })}
+                        className="input input-bordered"
+                    />
+                    {errors.tel && <p className="text-red-500 text-sm">{errors.tel.message}</p>}
+                </div>
+
+                <div className="form-control col-span-2">
                     <label className="label">
                         <span className="label-text text-base font-semibold">Subject</span>
                     </label>

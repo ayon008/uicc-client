@@ -124,15 +124,28 @@ const Page = () => {
                         </span>
                     </li>
                 </ul>
-                <div className='flex items-center mt-8 gap-6'>
-                    <Image className='flex-1' src={img1} alt='' />
-                    <Image className='flex-1' src={img2} alt='' />
-                </div>
-                <div className="flex-1 flex flex-col justify-between px-10">
-                    <div className="mt-16">
+                <h2 className='2xl:text-5xl xl:text-4xl font-semibold my-10'>
+                    Industry-Specific Counseling
+                </h2>
+                <ul className='space-y-10'>
+                    <li className='flex items-center'>
+                        <TickIcon />
+                        <span>
+                            Emerging Opportunities: Guidance on careers in trending sectors like IT, healthcare, digital marketing, and more.
+                        </span>
+                    </li>
+                    <li className='flex items-center'>
+                        <TickIcon />
+                        <span>
+                            Language-Based Careers: Insights into job opportunities requiring language skills (e.g., Japanese and Korean translators, teachers, or corporate roles).
+                        </span>
+                    </li>
+                </ul>
+                <div className="mt-10 py-10 flex-1 flex flex-col justify-between px-10 bg-[#FBFCFF]">
+                    <div className="">
                         <div className="flex items-center gap-2">
                             <FaTelegram />
-                            <h2 className="2xl:text-2xl xl:text-xl font-semibold">Air Ticketing</h2>
+                            <h2 className="2xl:text-2xl xl:text-xl font-semibold">Career Counseling</h2>
                         </div>
                         <h1 className="2xl:text-5xl xl:text-5xl text-2xl font-semibold mt-3 w-full">
                             Reason to Choose Us
@@ -146,8 +159,8 @@ const Page = () => {
                                 </div>
                             </div>
                             <div>
-                                <h2 className="2xl:text-3xl xl:text-2xl font-semibold">Convenience</h2>
-                                <p className="2xl:text-xl xl:text-lg font-normal mt-3">We handle the entire flight booking process, saving you time and effort.</p>
+                                <h2 className="2xl:text-3xl xl:text-2xl font-semibold">Experienced Counselors</h2>
+                                <p className="2xl:text-xl xl:text-lg font-normal mt-3">Our team has extensive knowledge of local and international career trends. </p>
                             </div>
                         </div>
                         <div className="flex items-center gap-4">
@@ -157,8 +170,8 @@ const Page = () => {
                                 </div>
                             </div>
                             <div>
-                                <h2 className="2xl:text-3xl xl:text-2xl font-semibold">Competitive Pricing</h2>
-                                <p className="2xl:text-xl xl:text-lg font-normal mt-3">Access to competitive fares and deals for your destination.</p>
+                                <h2 className="2xl:text-3xl xl:text-2xl font-semibold">Tailored Advice</h2>
+                                <p className="2xl:text-xl xl:text-lg font-normal mt-3">Personalized plans based on your unique profile and aspirations. </p>
                             </div>
                         </div>
                         <div className="flex items-center gap-4">
@@ -168,14 +181,25 @@ const Page = () => {
                                 </div>
                             </div>
                             <div>
-                                <h2 className="2xl:text-3xl xl:text-2xl font-semibold">Travel Expertise</h2>
-                                <p className="2xl:text-xl xl:text-lg font-normal mt-3">We provide guidance on the best routes and airlines for your journey.</p>
+                                <h2 className="2xl:text-3xl xl:text-2xl font-semibold">Global Network</h2>
+                                <p className="2xl:text-xl xl:text-lg font-normal mt-3">We connect you with educational institutions, training programs, and job opportunities worldwide.</p>
+                            </div>
+                        </div>
+                        <div className="flex items-center gap-4">
+                            <div className="p-2 w-fit bg-orange-light rounded-full">
+                                <div className="p-2 bg-orange rounded-full">
+                                    <FaTicket />
+                                </div>
+                            </div>
+                            <div>
+                                <h2 className="2xl:text-3xl xl:text-2xl font-semibold">Ongoing Support</h2>
+                                <p className="2xl:text-xl xl:text-lg font-normal mt-3">Career counseling is an ongoing process; we remain your partner at every step of your journey. </p>
                             </div>
                         </div>
                     </div>
                 </div>
                 <p className='2xl:text-2xl xl:text-xl font-semibold mt-16'>
-                    Let UICC take care of your travel plans with our reliable air ticket support, so you can focus on your next adventure.
+                    Whether you are at the start of your career journey, considering higher education abroad, or planning to make a significant career shift, International Career Council’s expert counseling services are here to guide you. *Contact us today* to schedule a consultation and take the first step toward a fulfilling career!
                 </p>
             </div>
         </div >
