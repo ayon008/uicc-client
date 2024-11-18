@@ -3,6 +3,7 @@ import "./globals.css";
 import Navbar from '@/shared/Navbar';
 import Footer from '@/shared/Footer';
 import AuthProvider from '@/Provider/AuthProvider';
+import AOSProvider from '@/Provider/AOSProvider';
 
 
 export const metadata = {
@@ -25,11 +26,13 @@ export default function RootLayout({ children }) {
         className={`antialiased ${montserrat.className}`}
       >
         <main className='max-w-[1920px] mx-auto min-h-screen'>
-          <AuthProvider>
-            <Navbar />
-            {children}
-            <Footer />
-          </AuthProvider>
+          <AOSProvider>
+            <AuthProvider>
+              <Navbar />
+              {children}
+              <Footer />
+            </AuthProvider>
+          </AOSProvider>
         </main>
       </body>
     </html>

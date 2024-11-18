@@ -4,12 +4,18 @@ import React from 'react';
 const SectionTitle = ({ subHeading, heading, width }) => {
     return (
         <div>
-            <div className="flex items-center justify-center gap-2">
+            {/* Subheading with AOS animation */}
+            <div data-aos="fade-right" className="flex items-center justify-center gap-2">
                 <FaTelegram />
                 <h2 className="2xl:text-2xl xl:text-xl font-semibold">{subHeading}</h2>
             </div>
-            <h1 className={`2xl:text-5xl xl:text-5xl text-2xl font-semibold mt-2 2xl:leading-[70px] xl:leading-[70px] text-center mx-auto ${width ? 'w-full' : 'w-[60%]'}`}>
-                {heading}
+
+            {/* Heading with delay applied via data-aos-delay */}
+            <h1 data-aos="fade-right"
+                data-aos-delay="100"
+                className={`2xl:text-5xl xl:text-5xl text-2xl font-semibold mt-2 2xl:leading-[70px] xl:leading-[70px] text-center mx-auto w-full}`}
+            >
+                <span>{heading}</span>
             </h1>
         </div>
     );

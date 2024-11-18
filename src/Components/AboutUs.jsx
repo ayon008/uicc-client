@@ -11,14 +11,14 @@ import FaTicket from '@/icons/FaTicket';
 const AboutUs = () => {
     return (
         <div className="grid grid-cols-2 max-w-[1440px] mx-auto p-24">
-            <div className="">
+            <div data-aos="fade-right" className="">
                 <div className="w-fit h-fit relative">
                     <Image className="" src={image} alt="" />
                     <Image className="absolute top-10 -right-14" src={img1} alt="" />
                     <Image className="absolute -left-14 bottom-28" src={img2} alt="" />
                 </div>
             </div>
-            <div className="flex flex-col justify-between">
+            <div data-aos="fade-left" className="flex flex-col justify-between">
                 <div className="flex items-center gap-2">
                     <FaTelegram />
                     <h2 className="2xl:text-2xl xl:text-xl font-semibold">About Us</h2>

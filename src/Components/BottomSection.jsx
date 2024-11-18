@@ -1,7 +1,7 @@
 import React from 'react';
 const BottomSection = () => {
     return (
-        <div className='px-10 2xl:mt-36 xl:mt-28'>
+        <div className='px-10 2xl:my-36 xl:my-28'>
             <div className='bottomSection flex flex-col'>
                 <div className='h-fit my-auto flex justify-between items-center 2xl:px-14 xl:px-10'>
                     <p className='text-white h-fit 2xl:text-5xl xl:text-4xl font-semibold'>Subscribe To Immigway <br /> For All the offers</p>

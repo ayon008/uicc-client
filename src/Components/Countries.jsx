@@ -14,6 +14,8 @@ import flag5 from '../../public/assets/Image-80 (6).png';
 import flag from '../../public/assets/Image-80.png'
 
 const Country = ({ country, flag }) => {
+    console.log(country);
+
     return (
         <div className='flex 2xl:gap-14 xl:gap-12 items-stretch h-full'>
             <div className='count'>
@@ -21,49 +23,144 @@ const Country = ({ country, flag }) => {
                     <p className='text-white my-auto vertical uppercase 2xl:text-2xl xl:text-2xl font-semibold'>{country}</p>
                 </div>
             </div>
-            <div className='flex items-center 2xl:gap-12 xl:gap-10'>
-                <div className=''>
-                    <h3 className='2xl:text-3xl xl:text-2xl font-semibold'>Student Visa</h3>
-                    <ul className='mt-6 2xl:space-y-[22px] xl:space-y-5'>
-                        <li className='flex items-center gap-1'>
-                            <div className='rounded-full w-fit h-fit p-1 bg-deep-blue'>
-                                <FaCheck color='white' />
+            {
+                country === 'JAPAN' ?
+                    <div className='flex items-center 2xl:gap-12 xl:gap-10'>
+                        <div className=''>
+                            <ul className='mt-6 2xl:space-y-[22px] xl:space-y-5'>
+                                <li className='flex items-center gap-1'>
+                                    <div className='rounded-full w-fit h-fit p-1 bg-deep-blue'>
+                                        <FaCheck color='white' />
+                                    </div>
+                                    <p className='2xl:text-base xl:text-base font-normal'>Student visa for Language program</p>
+                                </li>
+                                <li className='flex items-center gap-1'>
+                                    <div className='rounded-full w-fit h-fit p-1 bg-deep-blue'>
+                                        <FaCheck color='white' />
+                                    </div>
+                                    <p className='2xl:text-base xl:text-base font-normal'>Visitor visa</p>
+                                </li>
+                                <li className='flex items-center gap-1'>
+                                    <div className='rounded-full w-fit h-fit p-1 bg-deep-blue'>
+                                        <FaCheck color='white' />
+                                    </div>
+                                    <p className='2xl:text-base xl:text-base font-normal'>Job Visa</p>
+                                </li>
+                                <li className='flex items-center gap-1'>
+                                    <div className='rounded-full w-fit h-fit p-1 bg-deep-blue'>
+                                        <FaCheck color='white' />
+                                    </div>
+                                    <p className='2xl:text-base xl:text-base font-normal'>Specific Skilled Worker(SSW) visa</p>
+                                </li>
+                                <li className='flex items-center gap-1'>
+                                    <div className='rounded-full w-fit h-fit p-1 bg-deep-blue'>
+                                        <FaCheck color='white' />
+                                    </div>
+                                    <p className='2xl:text-base xl:text-base font-normal'>Business Visa</p>
+                                </li>
+                            </ul>
+                            <div className='2xl:mt-8 xl:mt-6'>
+                                <ButtonPrimary text={'Register Now'} />
                             </div>
-                            <p className='2xl:text-base xl:text-base font-normal'>90% Visa Success rate</p>
-                        </li>
-                        <li className='flex items-center gap-1'>
-                            <div className='rounded-full w-fit h-fit p-1 bg-deep-blue'>
-                                <FaCheck color='white' />
-                            </div>
-                            <p className='2xl:text-base xl:text-base font-normal'>Accommodation Guidance</p>
-                        </li>
-                        <li className='flex items-center gap-1'>
-                            <div className='rounded-full w-fit h-fit p-1 bg-deep-blue'>
-                                <FaCheck color='white' />
-                            </div>
-                            <p className='2xl:text-base xl:text-base font-normal'>Scholarship Guidance</p>
-                        </li>
-                        <li className='flex items-center gap-1'>
-                            <div className='rounded-full w-fit h-fit p-1 bg-deep-blue'>
-                                <FaCheck color='white' />
-                            </div>
-                            <p className='2xl:text-base xl:text-base font-normal'>All kinds of Bank Support</p>
-                        </li>
-                        <li className='flex items-center gap-1'>
-                            <div className='rounded-full w-fit h-fit p-1 bg-deep-blue'>
-                                <FaCheck color='white' />
-                            </div>
-                            <p className='2xl:text-base xl:text-base font-normal'>90% Visa Success rate</p>
-                        </li>
-                    </ul>
-                    <div className='2xl:mt-8 xl:mt-6'>
-                        <ButtonPrimary text={'Register Now'} />
+                        </div>
+                        <div>
+                            <Image className='w-[200px] h-[200px] rounded-full' src={flag} alt='' />
+                        </div>
                     </div>
-                </div>
-                <div>
-                    <Image className='w-[200px] h-[200px] rounded-full' src={flag} alt='' />
-                </div>
-            </div>
+                    :
+                    country === 'South Korea' ?
+                        <div className='flex items-center 2xl:gap-12 xl:gap-10'>
+                            <div className=''>
+                                <ul className='mt-6 2xl:space-y-[22px] xl:space-y-5'>
+                                    <li className='flex items-center gap-1'>
+                                        <div className='rounded-full w-fit h-fit p-1 bg-deep-blue'>
+                                            <FaCheck color='white' />
+                                        </div>
+                                        <p className='2xl:text-base xl:text-base font-normal'>Student Visa and Admission</p>
+                                    </li>
+                                    <li className='flex items-center gap-1'>
+                                        <div className='rounded-full w-fit h-fit p-1 bg-deep-blue'>
+                                            <FaCheck color='white' />
+                                        </div>
+                                        <p className='2xl:text-base xl:text-base font-normal'>Work Visa</p>
+                                    </li>
+                                    <li className='flex items-center gap-1'>
+                                        <div className='rounded-full w-fit h-fit p-1 bg-deep-blue'>
+                                            <FaCheck color='white' />
+                                        </div>
+                                        <p className='2xl:text-base xl:text-base font-normal'>Visitor visa</p>
+                                    </li>
+                                    <li className='flex items-center gap-1'>
+                                        <div className='rounded-full w-fit h-fit p-1 bg-deep-blue'>
+                                            <FaCheck color='white' />
+                                        </div>
+                                        <p className='2xl:text-base xl:text-base font-normal'>Business Visa</p>
+                                    </li>
+                                    <li className='flex items-center gap-1'>
+                                        <div className='rounded-full w-fit h-fit p-1 bg-deep-blue'>
+                                            <FaCheck color='white' />
+                                        </div>
+                                        <p className='2xl:text-base xl:text-base font-normal'>EPS-E9</p>
+                                    </li>
+                                    <li className='flex items-center gap-1'>
+                                        <div className='rounded-full w-fit h-fit p-1 bg-deep-blue'>
+                                            <FaCheck color='white' />
+                                        </div>
+                                        <p className='2xl:text-base xl:text-base font-normal'>Associate program (D4)</p>
+                                    </li>
+                                </ul>
+                                <div className='2xl:mt-8 xl:mt-6'>
+                                    <ButtonPrimary text={'Register Now'} />
+                                </div>
+                            </div>
+                            <div>
+                                <Image className='w-[200px] h-[200px] rounded-full' src={flag} alt='' />
+                            </div>
+                        </div> :
+                        <div className='flex items-center 2xl:gap-12 xl:gap-10'>
+                            <div className=''>
+                                <h3 className='2xl:text-3xl xl:text-2xl font-semibold'>Student Visa</h3>
+                                <ul className='mt-6 2xl:space-y-[22px] xl:space-y-5'>
+                                    <li className='flex items-center gap-1'>
+                                        <div className='rounded-full w-fit h-fit p-1 bg-deep-blue'>
+                                            <FaCheck color='white' />
+                                        </div>
+                                        <p className='2xl:text-base xl:text-base font-normal'>90% Visa Success rate</p>
+                                    </li>
+                                    <li className='flex items-center gap-1'>
+                                        <div className='rounded-full w-fit h-fit p-1 bg-deep-blue'>
+                                            <FaCheck color='white' />
+                                        </div>
+                                        <p className='2xl:text-base xl:text-base font-normal'>Accommodation Guidance</p>
+                                    </li>
+                                    <li className='flex items-center gap-1'>
+                                        <div className='rounded-full w-fit h-fit p-1 bg-deep-blue'>
+                                            <FaCheck color='white' />
+                                        </div>
+                                        <p className='2xl:text-base xl:text-base font-normal'>Scholarship Guidance</p>
+                                    </li>
+                                    <li className='flex items-center gap-1'>
+                                        <div className='rounded-full w-fit h-fit p-1 bg-deep-blue'>
+                                            <FaCheck color='white' />
+                                        </div>
+                                        <p className='2xl:text-base xl:text-base font-normal'>All kinds of Bank Support</p>
+                                    </li>
+                                    <li className='flex items-center gap-1'>
+                                        <div className='rounded-full w-fit h-fit p-1 bg-deep-blue'>
+                                            <FaCheck color='white' />
+                                        </div>
+                                        <p className='2xl:text-base xl:text-base font-normal'>90% Visa Success rate</p>
+                                    </li>
+                                </ul>
+                                <div className='2xl:mt-8 xl:mt-6'>
+                                    <ButtonPrimary text={'Register Now'} />
+                                </div>
+                            </div>
+                            <div>
+                                <Image className='w-[200px] h-[200px] rounded-full' src={flag} alt='' />
+                            </div>
+                        </div>
+            }
         </div>
     )
 }
@@ -91,7 +188,8 @@ const Accordion = () => {
     return (
         <div className="w-fit flex items-center justify-end mx-auto mb-32">
             {accordionItems.map((item, index) => (
-                <div key={index} className="flex flex-row-reverse border border-[#E8FFFE] h-[400px]">
+                <div data-aos="fade-up"
+                    data-aos-anchor-placement="top-bottom" key={index} className="flex flex-row-reverse border border-[#E8FFFE] h-[400px]">
                     {openIndex !== index && (
                         <button
                             className={`py-3 h-full font-semibold relative hover:bg-orange transition-all duration-300 ease-in-out 2xl:w-[100px] xl:w-[80px] border-[#E8FFFE]`}

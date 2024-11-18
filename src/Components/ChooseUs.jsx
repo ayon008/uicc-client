@@ -1,9 +1,11 @@
+'use client'
 import React from 'react';
 import image2 from '../../public/assets/jodyhongfilms-sI1mbxJFFpU-unsplash.jpg'
 import FaTelegram from '@/icons/FaTelegram';
 import FaVisa from '@/icons/FaVisa';
 import Image from 'next/image';
 import FaTicket from '@/icons/FaTicket';
+import Aos from 'aos';
 const ChooseUs = () => {
     return (
         <div className="px-10 max-w-7xl mx-auto flex justify-between gap-6 2xl:mb-40 xl:mb-28">

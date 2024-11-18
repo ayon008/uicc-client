@@ -21,7 +21,7 @@ const Page = () => {
                         <span>
                             <span className='text-deep-blue font-bold'>D-2 Visa (Study Abroad Visa):</span> For Undergraduate or Graduate Programs
                             <ul className='list-disc pl-6 mt-2'>
-                                <li>Eligibility: Students enrolled in full-time academic programs (bachelor's, master's, or doctoral degree).</li>
+                                <li>Eligibility: Students enrolled in full-time academic programs (bachelor&apos;s, master&apos;s, or doctoral degree).</li>
                                 <li>Required Documents:
                                     <ul className='list-item-dash'>
                                         <li>Passport</li>

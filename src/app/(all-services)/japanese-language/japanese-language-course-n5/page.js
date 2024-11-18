@@ -18,7 +18,7 @@ const Page = () => {
                     <li className='flex items-center'>
                         <TickIcon />
                         <span>
-                            Unlimited Japan's student visa is relatively easy to obtain.
+                            Unlimited Japan&apos;s student visa is relatively easy to obtain.
                         </span>
                     </li>
                     <li className='flex items-center'>

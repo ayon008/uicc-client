@@ -52,34 +52,57 @@ export default function Home() {
       <div className="">
         <SectionTitle heading={'We Provide Language Support and Visa Processing'} subHeading={'Our Services'} />
         <div className="grid grid-cols-3 mt-10 max-w-7xl mx-auto px-10">
-          <Services heading={'Career'} subHeading={'Career Counseling'} text={'UICC offers personalized career counseling to help students navigate the complexities of international job markets, providing insights into visa requirements, professional certifications, and career pathways.'} />
-          <div className="h-full w-full">
+          <div data-aos="fade-up"
+            data-aos-anchor-placement="top-bottom"
+            data-aos-duration="2000"
+          >
+            <Services heading={'Career'} href={'/signUp'} subHeading={'Career Counseling'} text={'UICC offers personalized career counseling to help students navigate the complexities of international job markets, providing insights into visa requirements, professional certifications, and career pathways.'} />
+          </div>
+          <div className="h-full w-full" data-aos="fade-up"
+            data-aos-anchor-placement="top-bottom"
+            data-aos-duration="2000">
             <Image src={ielts} className="h-full object-cover" alt="" />
           </div>
-          <Services heading={'IELTS'} subHeading={'IELTS Preparation'} text={'We offer specialized IELTS training programs that are designed to help students achieve the scores required for admission to international universities and professional qualifications.'} />
-          <div className="h-full w-full">
+          <div data-aos="fade-up"
+            data-aos-anchor-placement="top-bottom"
+            data-aos-duration="2000">
+            <Services heading={'IELTS'} href={'/signUp'} subHeading={'IELTS Preparation'} text={'We offer specialized IELTS training programs that are designed to help students achieve the scores required for admission to international universities and professional qualifications.'} />
+          </div>
+          <div data-aos="fade-up"
+            data-aos-anchor-placement="top-bottom"
+            data-aos-delay="500" className="h-full w-full">
             <Image src={ielts} className="h-full object-cover" alt="" />
           </div>
-          <Services heading={'language training'} subHeading={'Japanese and Korean Language'} text={'Whether for academic purposes, career advancement, or personal interest, our language courses are led by experienced instructors to ensure fluency and cultural competency.'} />
-          <div className="h-full w-full">
+          <div data-aos="fade-up"
+            data-aos-anchor-placement="top-bottom"
+            data-aos-delay="500">
+            <Services heading={'language training'} href={'/signUp'} subHeading={'Japanese and Korean Language'} text={'Whether for academic purposes, career advancement, or personal interest, our language courses are led by experienced instructors to ensure fluency and cultural competency.'} />
+          </div>
+          <div data-aos="fade-up"
+            data-aos-anchor-placement="top-bottom"
+            data-aos-delay="500" className="h-full w-full">
             <Image src={ielts} className="h-full object-cover" alt="" />
           </div>
         </div>
       </div>
-      <ServiceHistory count={'count'} />
-      <ChooseUs />
+      <div data-aos="fade-up">
+        <ServiceHistory count={'count'} />
+      </div>
+      <div data-aos="fade-right">
+        <ChooseUs />
+      </div>
       <div className="px-10">
         <SectionTitle subHeading={'Testimonial'} heading={'Committed to provide you best services'} />
         <Slider />
       </div>
       <Faq />
-      <div>
+      <div className="mb-32">
         <SectionTitle subHeading={'Latest News'} heading={'Our Latest News'} />
         <div className="px-10 grid grid-cols-2 gap-6 mt-10">
-          <NewsCard />
-          <NewsCard />
-          <NewsCard />
-          <NewsCard />
+          <NewsCard aos="zoom-in-left" />
+          <NewsCard aos="zoom-in-left" />
+          <NewsCard aos="zoom-in-right" />
+          <NewsCard aos="zoom-in-right" />
         </div>
       </div>
     </div >

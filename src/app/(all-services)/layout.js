@@ -11,6 +11,11 @@ import { useRouter } from 'next/navigation';
 
 const links = [
     {
+        name: 'Career Counseling  ',
+        href: '/career-counseling',
+        subArray: []
+    },
+    {
         name: 'Language Training',
         href: '/language-training',
         subArray: []

@@ -43,6 +43,7 @@
   background: rgb(0, 0, 0, 0.4);
   backdrop-filter: blur(2px);
   position: absolute;
+  z-index: 40;
 }
 
 .welcome {
@@ -290,4 +291,28 @@ textarea {
   border: 0.5px solid var(--333, #0B286D);
   background: var(--Color-White-Shade-1, #FFF);
   padding: 12px 24px;
+}
+
+/* Add this CSS to your global styles or module CSS file */
+
+@keyframes slideFromTop {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.counter {
+  display: inline-block;
+  animation: slideFromTop 1s ease-out;
+  font-size: 3rem;
+  /* Adjust as needed */
+  font-weight: bold;
+  color: #4caf50;
+  /* Customize the color */
 }
