@@ -32,7 +32,7 @@ const SelectTab = () => {
 
     return (
         <div>
-            <div className='mt-[100px] sliders'>
+            <div className='2xl:mt-[100px] xl:mt-[100px] mt-0 sliders'>
                 <Swiper
                     ref={swiperRef}
                     pagination={{ clickable: true }}
@@ -42,7 +42,7 @@ const SelectTab = () => {
                     }}
                     onSlideChange={handleSlideChange}
                     modules={[Navigation, Autoplay]} // Include Autoplay in modules
-                    className="mySwiper mt-10 overflow-hidden">
+                    className="mySwiper 2xl:mt-10 xl:mt-10 mt-0 overflow-hidden">
                     <SwiperSlide>
                         <Banner bannerImage={bannerImage} />
                     </SwiperSlide>
@@ -56,7 +56,7 @@ const SelectTab = () => {
                         <Banner bannerImage={bannerImage3} />
                     </SwiperSlide>
                 </Swiper>
-                <div className="custom-pagination flex gap-4 justify-center mt-4">
+                <div className="custom-pagination flex gap-4 justify-center 2xl:mb-0 xl:mb-0 mb-6">
                     <button className='' onClick={() => goToSlide(0)}>
                         <motion.div
                             initial={{ border: 'none', padding: 12 }}
@@ -67,7 +67,7 @@ const SelectTab = () => {
                                 initial={{ backgroundColor: '#D3D3D3' }}
                                 animate={{ backgroundColor: activeIndex === 0 ? '#ff8c3a' : '#D3D3D3' }}
                                 transition={{ duration: 0.3, ease: "easeInOut", delay: 0.01 }}
-                                className='w-[10px] h-[10px] rounded-full'>
+                                className='2xl:w-[10px] 2xl:h-[10px] xl:w-[10px] xl:h-[10px] w-[6px] h-[6px] rounded-full'>
 
                             </motion.div>
                         </motion.div>
@@ -82,7 +82,7 @@ const SelectTab = () => {
                                 initial={{ backgroundColor: '#D3D3D3' }}
                                 animate={{ backgroundColor: activeIndex === 1 ? '#ff8c3a' : '#D3D3D3' }}
                                 transition={{ duration: 0.3, ease: "easeInOut", delay: 0.01 }}
-                                className='w-[10px] h-[10px] rounded-full'>
+                                className='2xl:w-[10px] 2xl:h-[10px] xl:w-[10px] xl:h-[10px] w-[6px] h-[6px] rounded-full'>
 
                             </motion.div>
                         </motion.div>
@@ -97,7 +97,7 @@ const SelectTab = () => {
                                 initial={{ backgroundColor: '#D3D3D3' }}
                                 animate={{ backgroundColor: activeIndex === 2 ? '#ff8c3a' : '#D3D3D3' }}
                                 transition={{ duration: 0.3, ease: "easeInOut", delay: 0.01 }}
-                                className='w-[10px] h-[10px] rounded-full'>
+                                className='2xl:w-[10px] 2xl:h-[10px] xl:w-[10px] xl:h-[10px] w-[6px] h-[6px] rounded-full'>
 
                             </motion.div>
                         </motion.div>
@@ -112,26 +112,26 @@ const SelectTab = () => {
                                 initial={{ backgroundColor: '#D3D3D3' }}
                                 animate={{ backgroundColor: activeIndex === 3 ? '#ff8c3a' : '#D3D3D3' }}
                                 transition={{ duration: 0.3, ease: "easeInOut", delay: 0.01 }}
-                                className='w-[10px] h-[10px] rounded-full'>
+                                className='2xl:w-[10px] 2xl:h-[10px] xl:w-[10px] xl:h-[10px] w-[6px] h-[6px] rounded-full'>
 
                             </motion.div>
                         </motion.div>
                     </button>
                 </div>
                 <div className={'grid grid-cols-5'}>
-                    <Link href={'/language-training'} className={`border-deep-blue text-deep-blue cursor-pointer 2xl:py-6 xl:py-4 text-center border-2 bg-white font-semibold 2xl:text-2xl xl:text-lg`} >
+                    <Link href={'/language-training'} className={`border-deep-blue text-deep-blue cursor-pointer 2xl:py-6 xl:py-4 py-2 text-center border-2 bg-white font-semibold 2xl:text-2xl xl:text-lg text-[8px]`} >
                         Language Training
                     </Link>
-                    <Link href={'/career-counseling'} className={`border-deep-blue text-deep-blue cursor-pointer 2xl:py-6 xl:py-4 text-center border-2 bg-white font-semibold 2xl:text-2xl xl:text-lg`} >
+                    <Link href={'/career-counseling'} className={`border-deep-blue text-deep-blue cursor-pointer 2xl:py-6 xl:py-4 py-2 text-center border-2 bg-white font-semibold 2xl:text-2xl xl:text-lg text-[8px]`} >
                         Career Counseling
                     </Link>
-                    <Link href={'/visa-processing'} className={`border-deep-blue text-deep-blue cursor-pointer 2xl:py-6 xl:py-4 text-center border-2 bg-white font-semibold 2xl:text-2xl xl:text-lg`} >
+                    <Link href={'/visa-processing'} className={`border-deep-blue text-deep-blue cursor-pointer 2xl:py-6 xl:py-4 py-2 text-center border-2 bg-white font-semibold 2xl:text-2xl xl:text-lg text-[8px]`} >
                         Visa Processing
                     </Link>
-                    <Link href={'/air-ticket'} className={`border-deep-blue text-deep-blue cursor-pointer 2xl:py-6 xl:py-4 text-center border-2 bg-white font-semibold 2xl:text-2xl xl:text-lg`} >
+                    <Link href={'/air-ticket'} className={`border-deep-blue text-deep-blue cursor-pointer 2xl:py-6 xl:py-4 text-center py-2 border-2 bg-white font-semibold 2xl:text-2xl xl:text-lg text-[8px]`} >
                         Air Ticketing
                     </Link>
-                    <Link href={'/'} className={`border-deep-blue text-deep-blue cursor-pointer 2xl:py-6 xl:py-4 text-center border-2 bg-white font-semibold 2xl:text-2xl xl:text-lg`}>
+                    <Link href={'/'} className={`border-deep-blue text-deep-blue cursor-pointer 2xl:py-6 xl:py-4 text-center py-2 border-2 bg-white font-semibold 2xl:text-2xl xl:text-lg text-[8px]`}>
                         Training Center
                     </Link>
                 </div>

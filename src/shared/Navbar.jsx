@@ -8,7 +8,7 @@ import FaTwitter from '@/icons/FaTwitter';
 import FaWhatsapp from '@/icons/FaWhatsapp';
 import Image from 'next/image';
 import React, { useEffect, useState } from 'react';
-import logo from '../../public/assets/logo.svg'
+import logo from '../../public/assets/logo (1).svg';
 import { MdSearch } from 'react-icons/md';
 import Link from 'next/link';
 import DropDown from '@/icons/DrowDown';
@@ -36,34 +36,39 @@ const Navbar = () => {
     }, []);
 
     const navItems = <>
-        <li className={`2xl:text-xl xl:text-base font-semibold hover:text-orange transition-all duration-100 ${pathname === '/' ? 'text-orange' : ''}`}>
+        <li className={`2xl:text-xl xl:text-base text-sm font-semibold hover:text-orange transition-all duration-100 ${pathname === '/' ? 'text-orange' : ''}`}>
             <Link href="/">Home</Link>
         </li>
-        <li className={`2xl:text-xl xl:text-base font-semibold hover:text-orange transition-all duration-100 ${pathname === '/about' ? 'text-orange' : ''}`}>
+        <li className={`2xl:text-xl xl:text-base text-sm font-semibold hover:text-orange transition-all duration-100 ${pathname === '/about' ? 'text-orange' : ''}`}>
             <Link href="/about">About</Link>
         </li>
-        <li className={`2xl:text-xl xl:text-base font-semibold hover:text-orange transition-all duration-100 ${pathname === '/services' ? 'text-orange' : ''}`}>
+        <li className={`2xl:text-xl xl:text-base text-sm font-semibold hover:text-orange transition-all duration-100 ${pathname === '/services' ? 'text-orange' : ''}`}>
             <Link href="/services">Services</Link>
         </li>
-        <li className={`2xl:text-xl xl:text-base font-semibold hover:text-orange transition-all duration-100 ${pathname === '/universities' ? 'text-orange' : ''}`}>
+        <li className={`2xl:text-xl xl:text-base text-sm font-semibold hover:text-orange transition-all duration-100 2xl:-mr-5 xl:-mr-5 ${pathname === '/universities' ? 'text-orange' : ''}`}>
             <Link href="/universities">Associate Universities</Link>
         </li>
-        <li>
+        <li className='2xl:hidden xl:hidden block'><Link href="/ielts" className='uppercase font-semibold 2xl:text-xl xl:text-base text-sm 2xl:hidden xl:hidden block'>IELTS</Link></li>
+        <li className='2xl:hidden xl:hidden block'><Link href="/korean-language/korean-regular-batch" className='uppercase font-semibold 2xl:text-xl xl:text-base text-sm 2xl:hidden xl:hidden block'>Korean Language</Link></li>
+        <li><Link href="/japanese-language/japanese-language-course-n5" className='uppercase font-semibold 2xl:text-xl xl:text-base text-sm 2xl:hidden xl:hidden block'>Japanese Language</Link></li>
+        <li className='2xl:hidden xl:hidden block'><Link href="/german-language/basic-german" className='uppercase font-semibold 2xl:text-xl xl:text-base text-sm 2xl:hidden xl:hidden block'>German Language</Link></li>
+        <li className='2xl:hidden xl:hidden block'><Link href="/chinese-language/basic-chinese" className='uppercase font-semibold 2xl:text-xl xl:text-base text-sm 2xl:hidden xl:hidden block'>Chinese Language</Link></li>
+        <li className='2xl:block xl:block hidden'>
             <div className="dropdown dropdown-hover">
-                <div className='2xl:text-xl xl:text-base font-semibold dropdown-icon hover:text-orange transition-all duration-100 flex items-center cursor-pointer'>
+                <div className='2xl:text-xl xl:text-base text-sm font-semibold dropdown-icon hover:text-orange transition-all duration-100 flex items-center cursor-pointer'>
                     <span tabIndex={0} role="button">Education</span>
                     <DropDown />
                 </div>
-                <ul tabIndex={0} className="dropdown-content menu bg-[#FBFCFF] z-[1] xl:w-64 2xl:w-72 pb-2 pt-[40px] px-2 top-5 -left-8">
-                    <li><Link href="/ielts" className='uppercase font-semibold 2xl:text-xl xl:text-base'>IELTS</Link></li>
-                    <li><Link href="/korean-language/korean-regular-batch" className='uppercase font-semibold 2xl:text-xl xl:text-base'>Korean Language</Link></li>
-                    <li><Link href="/japanese-language/japanese-language-course-n5" className='uppercase font-semibold 2xl:text-xl xl:text-base'>Japanese Language</Link></li>
-                    <li><Link href="/german-language/basic-german" className='uppercase font-semibold 2xl:text-xl xl:text-base'>German Language</Link></li>
-                    <li><Link href="/chinese-language/basic-chinese" className='uppercase font-semibold 2xl:text-xl xl:text-base'>Chinese Language</Link></li>
+                <ul tabIndex={0} className="dropdown-content 2xl:block xl:block hidden menu  bg-[#FBFCFF] z-[1] xl:w-64 2xl:w-72 pb-2 pt-[40px] px-2 top-5 -left-8">
+                    <li><Link href="/ielts" className='uppercase font-semibold 2xl:text-xl xl:text-base text-sm'>IELTS</Link></li>
+                    <li><Link href="/korean-language/korean-regular-batch" className='uppercase font-semibold 2xl:text-xl xl:text-base text-sm'>Korean Language</Link></li>
+                    <li><Link href="/japanese-language/japanese-language-course-n5" className='uppercase font-semibold 2xl:text-xl xl:text-base text-sm'>Japanese Language</Link></li>
+                    <li><Link href="/german-language/basic-german" className='uppercase font-semibold 2xl:text-xl xl:text-base text-sm'>German Language</Link></li>
+                    <li><Link href="/chinese-language/basic-chinese" className='uppercase font-semibold 2xl:text-xl xl:text-base text-sm'>Chinese Language</Link></li>
                 </ul>
             </div>
         </li>
-        <li className={`2xl:text-xl xl:text-base font-semibold hover:text-orange transition-all duration-100 ${pathname === '/contact' ? 'text-orange' : ''}`}>
+        <li className={`2xl:text-xl xl:text-base text-sm font-semibold hover:text-orange transition-all duration-100 ${pathname === '/contact' ? 'text-orange' : ''}`}>
             <Link href="/contact">Contact</Link>
         </li>
     </>
@@ -71,7 +76,7 @@ const Navbar = () => {
 
     return (
         <div className='w-full relative z-50'>
-            <div className='w-full h-[60px] bg-orange flex items-center justify-between'>
+            <div className='w-full 2xl:h-[60px] xl:h-[60px] h-0 hidden bg-orange 2xl:flex xl:flex items-center justify-between'>
                 {/* Nav Start */}
                 <div className='nav-start  flex px-11 py-[12px] gap-1'>
                     <Facebook />
@@ -109,26 +114,47 @@ const Navbar = () => {
                     </div>
                 </div>
             </div>
-            <div className='absolute top-[60px] inset-0'>
+            <div className='absolute 2xl:top-[60px] xl:top-[60px] top-0 inset-0'>
                 <div className='bg-[#FBFCFF]'>
-                    <div className='flex items-center justify-between  max-w-[1440px] mx-auto relative h-[100px] 2xl:py-10 xl:py-10 px-11'>
-                        <div className='absolute top-0 left-11'>
-                            <div className='nav-start'>
-                                <Image className='w-[275px] h-[125px]' src={logo} alt='logo' />
+                    <div className='flex items-center justify-between  max-w-[1440px] mx-auto relative 2xl:h-[100px] xl:h-[100px] h-[50px] 2xl:py-10 xl:py-10 2xl:px-11 xl:px-11 px-4'>
+                        <div className='absolute top-0 2xl:left-11 xl:left-11 left-5'>
+                            <div className='nav-start bg-white shadow-xl'>
+                                <Image className='2xl:w-[140px] xl:w-[140px] w-[70px] 2xl:h-[110px] xl:h-[110px] h-auto object-contain' src={logo} alt='logo' />
                             </div>
                         </div>
-                        <div className='w-[275px] h-full'>
+                        <div className='2xl:w-[275px] xl:w-[275px] 2xl:block xl:block hidden h-full'>
 
                         </div>
-                        <div class="w-fit">
+                        <div class="w-fit 2xl:block xl:block hidden">
                             <ul class="flex navItems items-center justify-between 2xl:gap-8 xl:gap-6">
                                 {
                                     navItems
                                 }
                             </ul>
                         </div>
-                        <div className='w-fit'>
-                            <button className="rounded-[30px] flex items-center btn text-white bg-orange 2xl:text-lg xl:text-base">
+                        <div className="dropdown 2xl:ml-0 xl:ml-0 ml-auto 2xl:hidden xl:hidden block">
+                            <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    className="h-5 w-5"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                        strokeWidth="2"
+                                        d="M4 6h16M4 12h16M4 18h7" />
+                                </svg>
+                            </div>
+                            <ul
+                                tabIndex={0}
+                                className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow right-0">
+                                {navItems}
+                            </ul>
+                        </div>
+                        <div className='w-fit 2xl:block xl:block hidden'>
+                            <button className="rounded-[30px] flex items-center btn text-white bg-orange 2xl:text-lg xl:text-base text-sm">
                                 <MdSearch size={24} color="white" />
                                 <span>Search</span>
                             </button>
@@ -140,26 +166,29 @@ const Navbar = () => {
                 initial={{ top: -2000 }}
                 animate={{ top: scrolled ? 0 : -200 }}
                 transition={{ duration: 0.5, ease: "easeInOut", delay: 0.01 }}
-                className={`h-[100px] bg-[#FBFCFF] shadow-xl fixed right-0 left-0 z-50`}
+                className={`bg-[#FBFCFF] shadow-xl fixed right-0 left-0 z-50`}
             >
-                <div className='max-w-[1440px] mx-auto h-full flex items-center justify-between relative 2xl:py-10 xl:py-10 px-11'>
-                    <div className='absolute top-0 left-11'>
-                        <div className='nav-start'>
-                            <Image className='w-[275px] h-[125px]' src={logo} alt='logo' />
+                <div className='flex 2xl:h-[100px] xl:h-[100px] h-[50px] items-center justify-between  max-w-[1440px] mx-auto relative 2xl:py-10 xl:py-10 2xl:px-11 xl:px-11 px-4'>
+                    {/* <div className='absolute top-0 2xl:left-11 xl:left-11 left-5'>
+                        <div className='nav-start bg-white shadow-xl'>
+                            <Image className='2xl:w-[140px] xl:w-[140px] w-[70px] 2xl:h-[110px] xl:h-[110px] h-auto object-contain' src={logo} alt='logo' />
                         </div>
-                    </div>
-                    <div className='w-[275px] h-full'>
+                    </div> */}
+                    <div className='2xl:w-[275px] xl:w-[275px] 2xl:block xl:block hidden h-full'>
 
                     </div>
-                    <div class="w-fit">
+                    <div class="w-fit 2xl:block xl:block hidden">
                         <ul class="flex navItems items-center justify-between 2xl:gap-8 xl:gap-6">
                             {
                                 navItems
                             }
                         </ul>
                     </div>
-                    <div className='w-fit'>
-                        <button className="rounded-[30px] flex items-center btn text-white bg-orange 2xl:text-lg xl:text-base">
+                    <div className="dropdown 2xl:ml-0 xl:ml-0 ml-auto 2xl:hidden xl:hidden block z-50">
+                        Ayon
+                    </div>
+                    <div className='w-fit 2xl:block xl:block hidden'>
+                        <button className="rounded-[30px] flex items-center btn text-white bg-orange 2xl:text-lg xl:text-base text-sm">
                             <MdSearch size={24} color="white" />
                             <span>Search</span>
                         </button>

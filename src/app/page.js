@@ -42,7 +42,7 @@ export default function Home() {
       <SelectTab />
       <Notice />
       <AboutUs />
-      <div className="mb-32 px-10">
+      <div className="mb-32 2xl:px-10 xl:px-10 px-6">
         <SectionTitle heading={'Committed to provide you best visa services'} subHeading={'Visa Services'} />
         <Slider2 />
       </div>

@@ -4,6 +4,7 @@ import Navbar from '@/shared/Navbar';
 import Footer from '@/shared/Footer';
 import AuthProvider from '@/Provider/AuthProvider';
 import AOSProvider from '@/Provider/AOSProvider';
+import ScrollTopBtn from '@/Components/ScrollTopBtn';
 
 
 export const metadata = {
@@ -30,6 +31,9 @@ export default function RootLayout({ children }) {
             <AuthProvider>
               <Navbar />
               {children}
+              <div className='fixed bottom-28 right-16 z-50'>
+                <ScrollTopBtn />
+              </div>
               <Footer />
             </AuthProvider>
           </AOSProvider>
