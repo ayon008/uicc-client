@@ -83,9 +83,9 @@ const Page = () => {
 
 
     return (
-        <div className="mt-[100px] singIn">
-            <div className="2xl:py-40 xl:py-32 py-16 flex items-center justify-center">
-                <div className="card signInForm w-full max-w-md shrink-0 shadow-2xl">
+        <div className="2xl:mt-[100px] xl:mt-[100px] singIn">
+            <div className="2xl:py-40 xl:py-32 pb-20 pt-[130px] flex items-center justify-center">
+                <div className="card signInForm w-[90%] max-w-md shrink-0 shadow-2xl">
                     <form onSubmit={handleSubmit(onSubmit)} className="card-body pb-0">
                         <div>
                             <h1 className="text-white 2xl:text-3xl xl:text-3xl text-center font-bold">Sign Up</h1>

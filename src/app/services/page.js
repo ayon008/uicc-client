@@ -10,9 +10,9 @@ const page = () => {
     return (
         <div>
             <ServiceBanner text={'Services'} />
-            <div className="my-20 px-10">
+            <div className="my-20 2xl:px-10 xl:px-10 px-6">
                 <SectionTitle heading={'Committed to provide you best visa services'} subHeading={'Visa Services'} />
-                <div className="grid grid-cols-3 mt-10 max-w-7xl mx-auto px-10">
+                <div className="grid 2xl:grid-cols-3 xl:grid-cols-3 grid-cols-1 mt-10 max-w-7xl mx-auto 2xl:px-10 xl:px-10 2xl:gap-0 xl:gap-0 gap-6">
                     <Services btn={true} heading={'Career'} subHeading={'Career Counseling'} text={'UICC offers personalized career counseling to help students navigate the complexities of international job markets, providing insights into visa requirements, professional certifications, and career pathways.'} />
                     <div className="h-full w-full">
                         <Image src={ielts} className="h-full object-cover" alt="" />

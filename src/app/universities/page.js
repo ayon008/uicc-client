@@ -50,10 +50,10 @@ const page = () => {
     return (
         <div className=''>
             <ServiceBanner text={'Universities'} />
-            <div className='2xl:my-28 xl:my-20'>
+            <div className='2xl:my-28 xl:my-20 my-10'>
                 <SectionTitle subHeading={'Associate Universities'} heading={'The Universities We Serve'} />
             </div>
-            <div className='px-10 max-w-[1440px] mx-auto grid grid-cols-4 gap-6'>
+            <div className='px-10 max-w-[1440px] mx-auto grid 2xl:grid-cols-4 xl:grid-cols-4 grid-cols-1 gap-6'>
                 {
                     Array.from({ length: 5 })?.map((_, i) => {
                         return (
@@ -62,7 +62,7 @@ const page = () => {
                     })
                 }
             </div>
-            <div className='max-w-[1440px] mx-auto px-10'>
+            <div className='max-w-[1440px] mx-auto 2xl:px-10 xl:px-10'>
                 <BottomSection />
             </div>
         </div>

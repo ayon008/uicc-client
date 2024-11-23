@@ -15,11 +15,11 @@ const page = () => {
     return (
         <div className='max-w-[1440px] mx-auto'>
             <ServiceBanner text={'About Us'} />
-            <div className='2xl:my-20 xl:my-16'>
+            <div className='2xl:my-20 xl:my-16 my-10 2xl:px-0 xl:px-0 px-6'>
                 <SectionTitle heading={'We Help Making your Dream into Reality'} subHeading={'About Our Company'} />
             </div>
-            <div className='flex px-10 justify-between gap-10 mt-10'>
-                <div className='flex-1'>
+            <div className='flex 2xl:px-10 xl:px-10 px-6 justify-between gap-10 mt-10'>
+                <div className='flex-1 2xl:block xl:block hidden'>
                     <Image
                         className="w-full h-full object-cover"
                         style={{ objectPosition: '-520px center' }}
@@ -28,11 +28,11 @@ const page = () => {
                     />
                 </div>
                 <div className='flex-1'>
-                    <h5 className='text-xl font-medium'>
+                    <h5 className='2xl:text-xl xl:text-xl text-base font-medium'>
                         The mission of the UICC is to encourage the learning of in demand languages. With the right guidance and support you will be on your way to achieving your desire language test score and opening doors to world of opportunities. UICC language institute emphasizes personalized attention. Our classes are smaller batch sizes and one-to-one sessions are given where instructions address individual strengths and waitresses to improve specific areas.
                     </h5>
-                    <div className='w-fit 2xl:my-8 xl:my-6'>
-                        <span className='2xl:text-2xl xl:text-xl font-semibold w-fit'>Our Vision</span>
+                    <div className='w-fit 2xl:my-8 xl:my-6 my-5'>
+                        <span className='2xl:text-2xl xl:text-xl text-lg font-semibold w-fit'>Our Vision</span>
                         <div className='w-[60%] h-1 bg-orange rounded-[2px]'>
 
                         </div>
@@ -52,9 +52,14 @@ const page = () => {
             <ChooseUs />
             <div>
                 <SectionTitle heading={'We Have the Best Team'} subHeading={'Our Team'} />
-                <div className='mt-72'>
+                <div className='2xl:mt-72 xl:mt-72 mt-16'>
+                    <div className='grid 2xl:hidden xl:hidden grid-cols-1 gap-6'>
+                        <Image className='h-[400px] object-cover' src={image1} alt='' />
+                        <Image className='h-[400px] object-cover' src={image3} alt='' />
+                        <Image className='h-[400px] object-cover' src={image2} alt='' />
+                    </div>
                     <div className='count 2xl:h-[500px] xl:h-[400px] flex flex-col relative'>
-                        <div className='grid grid-cols-3 gap-6 absolute bottom-1/2 px-10'>
+                        <div className='2xl:grid xl:grid hidden grid-cols-3 gap-6 absolute bottom-1/2 px-10'>
                             <Image className='h-[400px] object-cover' src={image1} alt='' />
                             <Image className='h-[400px] object-cover' src={image3} alt='' />
                             <Image className='h-[400px] object-cover' src={image2} alt='' />

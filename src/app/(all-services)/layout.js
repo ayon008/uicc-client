@@ -152,7 +152,7 @@ export const State = (path) => {
 export default function RootLayout({ children }) {
     const [show, setShow] = useState(false);
     const router = useRouter();
-    const text = State('/air-ticket') ? 'Air Ticket' : State('/ielts') ? <span style={{ lineHeight: '60px' }}>IELTS<br />Programme</span> : State('/student-visa') ? <span>Student Visa<br />Services</span> : State('/tourist-visa') ? 'Tourist Visa' : State('/worker-visa') ? <span>Worker Visa<br />Services</span> : State('/family-visa') ? 'Family Visa' : State('/japanese-language') ? <span style={{ lineHeight: '60px' }}>Japanese<br />Language</span> : State('/korean-language') ? <span style={{ lineHeight: '60px' }}>Korean<br />Language</span> : State('/air-ticket') ? 'AIR TICKET' : State('/language-training') ? <span style={{ lineHeight: '60px' }}>Language<br />Training</span> : State('/career-counseling') ? <span style={{ lineHeight: '60px' }}>CAREER<br />COUNSELLING</span> : State('/visa-processing') ? <span style={{ lineHeight: '60px' }}>Visa<br />Processing</span> : '';
+    const text = State('/air-ticket') ? 'Air Ticket' : State('/ielts') ? <span className="2xl:leading-[60px] xl:leading-[60px] leading-[20px]">IELTS<br />Programme</span> : State('/student-visa') ? <span>Student Visa<br />Services</span> : State('/tourist-visa') ? 'Tourist Visa' : State('/worker-visa') ? <span>Worker Visa<br />Services</span> : State('/family-visa') ? 'Family Visa' : State('/japanese-language') ? <span className="2xl:leading-[60px] xl:leading-[60px] leading-[20px]">Japanese<br />Language</span> : State('/korean-language') ? <span className="2xl:leading-[60px] xl:leading-[60px] leading-[20px]">Korean<br />Language</span> : State('/air-ticket') ? 'AIR TICKET' : State('/language-training') ? <span className="2xl:leading-[60px] xl:leading-[60px] leading-[20px]">Language<br />Training</span> : State('/career-counseling') ? <span className="2xl:leading-[60px] xl:leading-[60px] leading-[20px]">CAREER<br />COUNSELLING</span> : State('/visa-processing') ? <span className="2xl:leading-[60px] xl:leading-[60px] leading-[20px]">Visa<br />Processing</span> : '';
 
     return (
         <div className='relative min-h-screen'>
@@ -166,9 +166,9 @@ export default function RootLayout({ children }) {
                 </div>
             } */}
                 <ServiceBanner text={text} />
-                <div className='max-w-[1440px] mx-auto px-11 py-16'>
-                    <div className='tabs items-start gap-10' style={{ display: 'grid', gridTemplateColumns: '1fr 2fr' }}>
-                        <div>
+                <div className='max-w-[1440px] mx-auto 2xl:px-11 xl:px-11 2xl:py-16 xl:py-16 p-6'>
+                    <div className="tabs grid 2xl:grid-cols-[1fr_2fr] xl:grid-cols-[1fr_2fr] grid-cols-1 items-start gap-10">
+                        <div className='2xl:order-1 xl:order-1 order-2'>
                             <ul className='space-y-4'>
                                 {
                                     links.map((link, i) => {
@@ -204,7 +204,7 @@ export default function RootLayout({ children }) {
                                                 </div>
                                                 {
                                                     link?.subArray?.length > 0 &&
-                                                    <ul tabIndex={0} className="dropdown-content menu bg-base-100 rounded-box w-full z-[1] px-8 py-6 shadow-2xl space-y-4 ml-4">
+                                                    <ul tabIndex={0} className="dropdown-content 2xl:block xl:block hidden menu bg-base-100 rounded-box w-full z-[1] px-8 py-6 shadow-2xl space-y-4 ml-4">
                                                         {
                                                             link?.subArray.map((item, i) => {
                                                                 return (
@@ -225,7 +225,7 @@ export default function RootLayout({ children }) {
                             </ul>
                             <Image className='mt-10 max-h-[500px]' src={image} alt='' />
                         </div>
-                        <div>
+                        <div className='2xl:order-2 xl:order-2 order-1'>
                             {children}
                         </div>
                     </div>
