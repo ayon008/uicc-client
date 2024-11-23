@@ -31,7 +31,7 @@ export default function RootLayout({ children }) {
             <AuthProvider>
               <Navbar />
               {children}
-              <div className='fixed bottom-28 right-16 z-50'>
+              <div className='fixed 2xl:bottom-28 xl:bottom-28 2xl:right-16 xl:right-16 bottom-10 right-8 z-50'>
                 <ScrollTopBtn />
               </div>
               <Footer />

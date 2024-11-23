@@ -13,9 +13,9 @@ const ServiceBanner = ({ text }) => {
     };
 
     return (
-        <div className="relative mt-[100px]">
+        <div className="relative 2xl:mt-[100px] xl:mt-[100px]">
             {/* Background image */}
-            <Image src={bannerImage} className="w-full max-h-[380px] object-fill" alt="Banner" />
+            <Image src={bannerImage} className="w-full max-h-[380px] min-h-[220px] object-fill" alt="Banner" />
 
             {/* Overlay with text */}
             <div className="absolute inset-0">

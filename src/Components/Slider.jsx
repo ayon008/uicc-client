@@ -38,18 +38,18 @@ export default function Slider() {
                 className="mySwiper mt-10">
                 <SwiperSlide>
                     <div className='relative'>
-                        <Image className='w-full max-h-[600px] xl:h-[550px] 2xl:h-[600px]' src={slider1} alt='' />
-                        <div className='absolute bottom-0 w-1/2 left-0 bg-orange py-6 px-12'>
-                            <p className='text-white 2xl:text-xl xl:text-lg'>
+                        <Image className='w-full max-h-[600px] xl:h-[550px] 2xl:h-[600px] h-[300px] object-fill' src={slider1} alt='' />
+                        <div className='absolute bottom-0 w-1/2 left-0 bg-orange 2xl:py-6 xl:py-6 py-4 2xl:px-12 xl:px-12 px-6'>
+                            <p className='text-white 2xl:text-xl xl:text-lg text-[8px]'>
                                 “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam”
                             </p>
-                            <h3 className='mt-6 font-semibold 2xl:text-3xl xl:text-2xl text-white'>Ronald Richards</h3>
-                            <p className='mt-2 2xl:text-2xl xl:text-xl font-medium text-white'>Saint Vincent and the Grenadines</p>
+                            <h3 className='2xl:mt-6 xl:mt-6 mt-2 font-semibold 2xl:text-3xl xl:text-2xl text-base text-white'>Ronald Richards</h3>
+                            <p className='2xl:mt-2 xl:mt-2 mt-[3px] 2xl:text-2xl xl:text-xl text-[10px] font-medium text-white'>Saint Vincent and the Grenadines</p>
                         </div>
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <Image className='w-full max-h-[600px] xl:h-[550px] 2xl:h-[600px]' src={slider2} alt='' />
+                    <Image className='w-full max-h-[600px] xl:h-[550px] 2xl:h-[600px] h-[300px] object-fill' src={slider2} alt='' />
                 </SwiperSlide>
                 <SwiperSlide>Slide 3</SwiperSlide>
                 <SwiperSlide>Slide 4</SwiperSlide>

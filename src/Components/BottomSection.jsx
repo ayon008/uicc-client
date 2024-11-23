@@ -1,12 +1,12 @@
 import React from 'react';
 const BottomSection = () => {
     return (
-        <div className='px-10 2xl:my-36 xl:my-28'>
+        <div className='px-10 2xl:my-36 xl:my-28 my-12'>
             <div className='bottomSection flex flex-col'>
-                <div className='h-fit my-auto flex justify-between items-center 2xl:px-14 xl:px-10'>
-                    <p className='text-white h-fit 2xl:text-5xl xl:text-4xl font-semibold'>Subscribe To Immigway <br /> For All the offers</p>
-                    <form className='min-w-[400px] relative h-fit'>
-                        <input className='rounded-[40px] px-4 py-4 w-full' type='email' placeholder='Email' />
+                <div className='h-fit my-auto flex 2xl:flex-row xl:flex-row flex-col justify-between items-center 2xl:px-14 xl:px-10 px-6'>
+                    <p className='text-white h-fit 2xl:text-5xl xl:text-4xl text-lg font-semibold'>Subscribe To Immigway <br /> For All the offers</p>
+                    <form className='2xl:min-w-[400px] xl:min-w-[400px] relative h-fit'>
+                        <input className='rounded-[40px] p-4 w-full' type='email' placeholder='Email' />
                         <button type='submit' className='absolute bottom-[5px] right-2'>
                             <div className='bg-orange p-3 rounded-full'>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="22" height="21" viewBox="0 0 22 21" fill="none">

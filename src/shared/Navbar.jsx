@@ -174,6 +174,11 @@ const Navbar = () => {
                             <Image className='2xl:w-[140px] xl:w-[140px] w-[70px] 2xl:h-[110px] xl:h-[110px] h-auto object-contain' src={logo} alt='logo' />
                         </div>
                     </div> */}
+                    <div className='absolute top-0 2xl:left-11 xl:left-11 left-5'>
+                        <div className='nav-start bg-white shadow-xl'>
+                            <Image className='2xl:w-[140px] xl:w-[140px] w-[70px] 2xl:h-[110px] xl:h-[110px] h-auto object-contain' src={logo} alt='logo' />
+                        </div>
+                    </div>
                     <div className='2xl:w-[275px] xl:w-[275px] 2xl:block xl:block hidden h-full'>
 
                     </div>
@@ -184,8 +189,26 @@ const Navbar = () => {
                             }
                         </ul>
                     </div>
-                    <div className="dropdown 2xl:ml-0 xl:ml-0 ml-auto 2xl:hidden xl:hidden block z-50">
-                        Ayon
+                    <div className="dropdown 2xl:ml-0 xl:ml-0 ml-auto 2xl:hidden xl:hidden block">
+                        <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="h-5 w-5"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    strokeWidth="2"
+                                    d="M4 6h16M4 12h16M4 18h7" />
+                            </svg>
+                        </div>
+                        <ul
+                            tabIndex={0}
+                            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow right-0">
+                            {navItems}
+                        </ul>
                     </div>
                     <div className='w-fit 2xl:block xl:block hidden'>
                         <button className="rounded-[30px] flex items-center btn text-white bg-orange 2xl:text-lg xl:text-base text-sm">

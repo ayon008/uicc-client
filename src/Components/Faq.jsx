@@ -4,13 +4,13 @@ import React from 'react';
 import image3 from '../../public/assets/image (3).png'
 const Faq = () => {
     return (
-        <div className="px-10 max-w-[1440px] mx-auto flex gap-2 2xl:my-36 xl:my-38 my-20">
-            <Image className="max-h-[550px] object-contain" src={image3} alt="" />
+        <div className="2xl:px-10 xl:px-10 px-6 max-w-[1440px] mx-auto flex gap-2 2xl:my-36 xl:my-38 my-20">
+            <Image className="max-h-[550px] object-contain 2xl:block xl:block hidden" src={image3} alt="" />
             <div className="flex-1">
                 <div>
                     <div className="flex items-center gap-2">
                         <FaTelegram />
-                        <h2 className="2xl:text-2xl xl:text-xl font-semibold">Questions and Answers</h2>
+                        <h2 className="2xl:text-2xl xl:text-xl text-lg font-semibold">Questions and Answers</h2>
                     </div>
                     <h1 className="2xl:text-5xl xl:text-5xl text-2xl font-semibold mt-2 w-full">
                         Frequently Asked Questions
@@ -47,7 +47,7 @@ const Faq = () => {
                             </label>
                             <div className="collapse-content p-0 border-t-[1px] border-t-[#D9D9D9]">
                                 <div className="p-6">
-                                    <p className="w-[92%] mx-auto">
+                                    <p className="w-[92%] mx-auto 2xl:text-base xl:text-base text-sm">
                                         We offer both general and academic IELTS preparation courses, including intensive and flexible schedules tailored to individual needs. The course duration ranges from 4 to 12 weeks depending on the program.
                                     </p>
                                 </div>
@@ -84,7 +84,7 @@ const Faq = () => {
                             </label>
                             <div className="collapse-content p-0 border-t-[1px] border-t-[#D9D9D9]">
                                 <div className="p-6">
-                                    <p className="w-[92%] mx-auto">
+                                    <p className="w-[92%] mx-auto 2xl:text-base xl:text-base text-sm">
                                         Yes, we offer regular mock tests to simulate the actual IELTS exam, along with detailed feedback to help you identify and improve your weak areas.
                                     </p>
                                 </div>
@@ -121,7 +121,7 @@ const Faq = () => {
                             </label>
                             <div className="collapse-content p-0 border-t-[1px] border-t-[#D9D9D9]">
                                 <div className="p-6">
-                                    <p className="w-[92%] mx-auto">
+                                    <p className="w-[92%] mx-auto 2xl:text-base xl:text-base text-sm">
                                         We provide training for multiple languages, including English, Chinese, German, Korean and Japanese. Our courses are open to students, professionals, and anyone looking to enhance their language skills
                                     </p>
                                 </div>

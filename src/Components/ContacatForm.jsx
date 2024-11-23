@@ -45,8 +45,8 @@ const ContactForm = () => {
     };
 
     return (
-        <div className="w-3/4 mx-auto mt-20">
-            <form onSubmit={handleSubmit(onSubmit)} className="grid grid-cols-2 gap-5">
+        <div className="2xl:w-3/4 xl:w-3/4 w-full mx-auto 2xl:mt-20 xl:mt-20 mt-12 2xl:p-0 xl:p-0 p-6">
+            <form onSubmit={handleSubmit(onSubmit)} className="grid 2xl:grid-cols-2 xl:grid-cols-2 grid-cols-1 gap-5">
                 <div className="form-control">
                     <label className="label">
                         <span className="label-text text-base font-semibold">First Name</span>
@@ -104,7 +104,7 @@ const ContactForm = () => {
                     {errors.tel && <p className="text-red-500 text-sm">{errors.tel.message}</p>}
                 </div>
 
-                <div className="form-control col-span-2">
+                <div className="form-control 2xl:col-span-2 xl:col-span-2">
                     <label className="label">
                         <span className="label-text text-base font-semibold">Subject</span>
                     </label>
@@ -117,7 +117,7 @@ const ContactForm = () => {
                     {errors.subject && <p className="text-red-500 text-sm">{errors.subject.message}</p>}
                 </div>
 
-                <div className="form-control col-span-2 mt-4">
+                <div className="form-control 2xl:col-span-2 xl:col-span-2 mt-4">
                     <textarea
                         rows={3}
                         placeholder="Write your message"
@@ -127,7 +127,7 @@ const ContactForm = () => {
                     {errors.message && <p className="text-red-500 text-sm">{errors.message.message}</p>}
                 </div>
 
-                <div className="form-control mt-6 col-span-2">
+                <div className="form-control mt-6 2xl:col-span-2 xl:col-span-2">
                     <button type="submit" className="btn count text-xl font-bold text-white">Send Message</button>
                 </div>
             </form>

@@ -15,13 +15,13 @@ import ChooseUs from "@/Components/ChooseUs";
 import Services from "@/Components/Services";
 import Link from "next/link";
 
-export const ButtonTerTiary = ({ text, href }) => {
+export const ButtonTerTiary = ({ text, href, width, height }) => {
   return (
     <Link href={href || ''}>
-      <button className={`pl-6 pr-3 h-fit w-full py-4 rounded-[40px] text-white flex justify-between items-center border-none btn uppercase 2xl:text-xl xl:text-base news`}>
+      <button className={`2xl:pl-6 xl:pl-6 pl-4 2xl:pr-3 xl:pr-3 pr-2 h-fit w-full 2xl:py-4 xl:py-4 py-2 rounded-[40px] text-white flex justify-between items-center border-none btn uppercase 2xl:text-xl xl:text-base text-xs news`}>
         <span className='mr-2'>{text}</span>
         <div className='bg-white p-2 rounded-full'>
-          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="17" viewBox="0 0 18 17" fill="none">
+          <svg xmlns="http://www.w3.org/2000/svg" width={`${width || 18}`} height={`${height || 17}`} viewBox={`0 0 ${width || 18} ${height || 17}`} fill="none">
             <path d="M17.1193 2.02701C17.1342 1.47492 16.6987 1.01528 16.1467 1.00035L7.14994 0.7572C6.59786 0.742279 6.13821 1.17773 6.12329 1.72982C6.10837 2.2819 6.54382 2.74155 7.09591 2.75647L15.093 2.97261L14.8769 10.9697C14.8619 11.5218 15.2974 11.9814 15.8495 11.9963C16.4016 12.0113 16.8612 11.5758 16.8761 11.0237L17.1193 2.02701ZM2.28833 16.4808L16.8074 2.72594L15.4319 1.27404L0.912841 15.0289L2.28833 16.4808Z" fill="url(#paint0_linear_346_2563)" />
             <defs>
               <linearGradient id="paint0_linear_346_2563" x1="8.86011" y1="8.87744" x2="9.54786" y2="9.60339" gradientUnits="userSpaceOnUse">
@@ -42,7 +42,7 @@ export default function Home() {
       <SelectTab />
       <Notice />
       <AboutUs />
-      <div className="mb-32 2xl:px-10 xl:px-10 px-6">
+      <div className="2xl:mb-32 xl:mb-24 mb-16 2xl:px-10 xl:px-10 px-6">
         <SectionTitle heading={'Committed to provide you best visa services'} subHeading={'Visa Services'} />
         <Slider2 />
       </div>
@@ -51,7 +51,7 @@ export default function Home() {
       </div>
       <div className="">
         <SectionTitle heading={'We Provide Language Support and Visa Processing'} subHeading={'Our Services'} />
-        <div className="grid grid-cols-3 mt-10 max-w-7xl mx-auto px-10">
+        <div className="grid 2xl:grid-cols-3 xl:grid-cols-3 grid-cols-1 2xl:gap-0 xl:gap-0 gap-6 mt-10 max-w-7xl mx-auto 2xl:px-10 xl:px-10 px-6">
           <div data-aos="fade-up"
             data-aos-anchor-placement="top-bottom"
             data-aos-duration="2000"
@@ -91,14 +91,14 @@ export default function Home() {
       <div data-aos="fade-right">
         <ChooseUs />
       </div>
-      <div className="px-10">
+      <div className="2xl:px-10 xl:px-10 px-6">
         <SectionTitle subHeading={'Testimonial'} heading={'Committed to provide you best services'} />
         <Slider />
       </div>
       <Faq />
-      <div className="mb-32">
+      <div className="2xl:mb-32 xl:mb-24 mb-16">
         <SectionTitle subHeading={'Latest News'} heading={'Our Latest News'} />
-        <div className="px-10 grid grid-cols-2 gap-6 mt-10">
+        <div className="2xl:px-10 xl:px-10 px-6 grid 2xl:grid-cols-2 xl:grid-cols-2 grid-cols-1 gap-6 mt-10">
           <NewsCard aos="zoom-in-left" />
           <NewsCard aos="zoom-in-left" />
           <NewsCard aos="zoom-in-right" />
