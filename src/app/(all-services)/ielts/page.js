@@ -12,7 +12,7 @@ const Page = () => {
         <div>
             <div>
                 <h1 className='2xl:text-5xl xl:text-4xl font-semibold'>IELTS Programme</h1>
-                <p className='2xl:text-xl xl:text-lg font-normal mt-6'>
+                <p className='2xl:text-xl xl:text-lg text-base font-normal mt-6'>
                     Get the IELTS score you need with our proven methods and expert teachers. Our comprehensive IELTS course is intended to give you everything you need to succeed and get the score you require. You will receive personalised feedback regarding your areas of improvement. You can also take unlimited mock tests with us to hone your skills and get one step closer to your dreams.
                 </p>
                 <h2 className='2xl:text-5xl xl:text-4xl font-semibold my-10'>
@@ -38,9 +38,13 @@ const Page = () => {
                         </span>
                     </li>
                 </ul>
-                <div className='flex items-center mt-10 gap-6'>
-                    <Image className='flex-1' src={img1} alt='' />
-                    <Image className='flex-1' src={img2} alt='' />
+                <div className='flex items-center mt-10 2xl:gap-6 xl:gap-6 gap-3 w-full'>
+                    <div className='w-1/2'>
+                        <Image className='2xl:flex-1 xl:flex-1 w-full' src={img1} alt='' />
+                    </div>
+                    <div className='w-1/2'>
+                        <Image className='2xl:flex-1 xl:flex-1 w-full' src={img2} alt='' />
+                    </div>
                 </div>
                 <h2 className='2xl:text-5xl xl:text-4xl font-semibold my-10'>
                     What You Will Learn from the Course

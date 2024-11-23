@@ -92,9 +92,13 @@ const Page = () => {
                         </span>
                     </li>
                 </ul>
-                <div className='flex items-center mt-10 gap-6'>
-                    <Image className='flex-1' src={img1} alt='' />
-                    <Image className='flex-1' src={img2} alt='' />
+                <div className='flex items-center mt-10 2xl:gap-6 xl:gap-6 gap-3 w-full'>
+                    <div className='w-1/2'>
+                        <Image className='2xl:flex-1 xl:flex-1 w-full' src={img1} alt='' />
+                    </div>
+                    <div className='w-1/2'>
+                        <Image className='2xl:flex-1 xl:flex-1 w-full' src={img2} alt='' />
+                    </div>
                 </div>
                 <p className='2xl:text-2xl xl:text-xl font-semibold mt-16'>
                     At UICC, we make travel easy. Let us manage the visa process while you plan your dream trip.

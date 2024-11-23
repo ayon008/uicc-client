@@ -178,7 +178,7 @@ export default function RootLayout({ children }) {
                                                     router.push(`${link.href}`)
                                                 }
                                                 setShow(true)
-                                            }} className={`dropdown dropdown-right w-full`}>
+                                            }} className={`dropdown 2xl:dropdown-right xl:dropdown-right dropdown-bottom w-full left-0`}>
                                                 <div tabIndex={0} role="button"
                                                     className={`rounded-xl p-6 ${State(link.href) ? 'bg-orange text-white' : 'bg-white text-black'} flex items-center justify-between`} style={{
                                                         boxShadow: "0px 0px 8px 4px rgba(0, 0, 0, 0.05)"
@@ -204,7 +204,7 @@ export default function RootLayout({ children }) {
                                                 </div>
                                                 {
                                                     link?.subArray?.length > 0 &&
-                                                    <ul tabIndex={0} className="dropdown-content 2xl:block xl:block hidden menu bg-base-100 rounded-box w-full z-[1] px-8 py-6 shadow-2xl space-y-4 ml-4">
+                                                    <ul tabIndex={0} className="dropdown-content menu bg-base-100 rounded-box w-full z-[1] px-8 py-6 shadow-2xl space-y-4 ml-4">
                                                         {
                                                             link?.subArray.map((item, i) => {
                                                                 return (

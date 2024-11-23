@@ -139,9 +139,13 @@ const Page = () => {
                         </span>
                     </li>
                 </ul>
-                <div className='flex items-center mt-10 gap-6'>
-                    <Image className='flex-1' src={img1} alt='' />
-                    <Image className='flex-1' src={img2} alt='' />
+                <div className='flex items-center mt-10 2xl:gap-6 xl:gap-6 gap-3 w-full'>
+                    <div className='w-1/2'>
+                        <Image className='2xl:flex-1 xl:flex-1 w-full' src={img1} alt='' />
+                    </div>
+                    <div className='w-1/2'>
+                        <Image className='2xl:flex-1 xl:flex-1 w-full' src={img2} alt='' />
+                    </div>
                 </div>
                 <h2 className='2xl:text-5xl xl:text-4xl font-semibold my-10'>
                     FACILITIES
