@@ -93,7 +93,7 @@ const Navbar = () => {
 
     return (
         <div className='w-full relative z-50'>
-            <div className='w-full 2xl:h-[60px] xl:h-[60px] h-0 hidden bg-orange 2xl:flex xl:flex items-center justify-between'>
+            <div className='w-full 2xl:h-[60px] shadow-xl xl:h-[60px] h-0 hidden bg-orange 2xl:flex xl:flex items-center justify-between'>
                 {/* Nav Start */}
                 <div className='nav-start  flex px-11 py-[12px] gap-1'>
                     <Facebook />

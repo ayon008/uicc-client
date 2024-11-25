@@ -1,3 +1,4 @@
+'use client'
 import FaTelegram from '@/icons/FaTelegram';
 import FaVisa from '@/icons/FaVisa';
 import React from 'react';
@@ -8,15 +9,40 @@ import img1 from '../../public/assets/1.png'
 import img2 from '../../public/assets/2.png'
 import FaTicket from '@/icons/FaTicket';
 import Link from 'next/link';
-
+import { useInView } from 'react-intersection-observer';
+import { motion } from "framer-motion";
 const AboutUs = () => {
+    const { ref, inView } = useInView({
+        triggerOnce: false, // Trigger animation only once
+        threshold: 0.5, // Trigger when 50% of the element is visible
+    });
     return (
         <div className="grid 2xl:grid-cols-2 xl:grid-cols-2 grid-cols-1 max-w-[1440px] mx-auto 2xl:p-24 xl:p-24 px-5 py-10">
-            <div data-aos="fade-right" className="2xl:block xl:block hidden">
-                <div className="w-fit h-fit relative">
+            <div data-aos='fade-right' className="2xl:block xl:block hidden">
+                <div className="w-fit h-fit relative" ref={ref}>
                     <Image className="" src={image} alt="" />
-                    <Image className="absolute top-10 -right-14" src={img1} alt="" />
-                    <Image className="absolute -left-14 bottom-28" src={img2} alt="" />
+                    <motion.div
+                        initial={{ clipPath: 'inset(0 100% 0 0)' }}
+                        animate={inView ? { clipPath: 'inset(0 0% 0 0)' } : { clipPath: 'inset(0 100% 0 0)' }}
+                        transition={{
+                            duration: 1, // Animation duration in seconds
+                            ease: "easeInOut",
+                            delay: 0.1 // Easing function
+                        }}
+                        className='absolute top-10 -right-14'>
+                        <Image className="" src={img1} alt="" />
+                    </motion.div>
+                    <motion.div
+                        initial={{ clipPath: 'inset(0 100% 0 0)' }}
+                        animate={inView ? { clipPath: 'inset(0 0% 0 0)' } : { clipPath: 'inset(0 100% 0 0)' }}
+                        transition={{
+                            duration: 1, // Animation duration in seconds
+                            ease: "easeInOut",
+                            delay: 0.1 // Easing function
+                        }}
+                        className='absolute -left-14 bottom-28'>
+                        <Image className="" src={img2} alt="" />
+                    </motion.div>
                 </div>
             </div>
             <div data-aos="fade-left" className="flex flex-col justify-between 2xl:space-y-0 xl:space-y-0 space-y-6">

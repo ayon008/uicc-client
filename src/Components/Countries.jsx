@@ -21,7 +21,7 @@ import sk from '../../public/assets/e4ddbc2dec6441d0cd7eb408b7589d7e.png'
 import nzl from '../../public/assets/82c7acee9c6a83e97829b10c33b06123.png'
 import Link from 'next/link';
 
-const Country = ({ country, flag }) => {
+const Country = ({ country, flag, i }) => {
     console.log(country);
 
     return (
@@ -137,7 +137,7 @@ const Country = ({ country, flag }) => {
                                         <div className='rounded-full w-fit h-fit p-1 bg-deep-blue'>
                                             <FaCheck color='white' />
                                         </div>
-                                        <p className='2xl:text-base xl:text-base text-sm font-normal'>90% Visa Success rate</p>
+                                        <p className='2xl:text-base xl:text-base text-sm font-normal'>{`9${i}`}% Visa Success rate</p>
                                     </li>
                                     <li className='flex items-center gap-1'>
                                         <div className='rounded-full w-fit h-fit p-1 bg-deep-blue'>
@@ -219,7 +219,7 @@ const Accordion = () => {
                             className={`transition-all flex-1 duration-300 overflow-hidden ${openIndex === index ? 'max-w-full min-w-[650px] 2xl:pr-6' : 'max-w-0 min-w-0'
                                 }`}
                         >
-                            <Country country={item.title} flag={item.flag} />
+                            <Country i={index} country={item.title} flag={item.flag} />
                         </div>
                     </div>
                     <div data-aos="fade-up"
@@ -242,7 +242,7 @@ const Accordion = () => {
                                 className={`transition-all flex-1 duration-300 overflow-hidden ${openIndex === index ? 'w-full 2xl:pr-6' : 'w-0 h-0'
                                     }`}
                             >
-                                <Country country={item.title} flag={item.flag} />
+                                <Country i={index} country={item.title} flag={item.flag} />
                             </div>
                         }
 

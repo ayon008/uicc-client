@@ -8,11 +8,13 @@ import 'swiper/css/navigation';
 // import required modules
 import { Autoplay, Navigation } from 'swiper/modules';
 import Banner from './Banner';
-import bannerImage from '../../public/assets/pexels-apasaric-618079.jpg'
 import bannerImage1 from '../../public/assets/pexels-lkloeppel-466685.jpg'
-import bannerImage2 from '../../public/assets/Family VISA.png'
-import bannerImage3 from '../../public/assets/Worker VISA.png'
-import Aos from 'aos';
+import usFlag from '../../public/assets/flag-h1-2.png'
+import nzFlag from '../../public/assets/flag-h1-3.png'
+import canFlag from '../../public/assets/canada.png'
+import person1 from '../../public/assets/slide-h1-2.png'
+import person2 from '../../public/assets/slide-h1-3.png'
+import person3 from '../../public/assets/Hue_Saturation-603x722.png'
 import Link from 'next/link';
 
 const SelectTab = () => {
@@ -44,17 +46,14 @@ const SelectTab = () => {
                     modules={[Navigation, Autoplay]} // Include Autoplay in modules
                     className="mySwiper 2xl:mt-10 xl:mt-10 mt-0 overflow-hidden">
                     <SwiperSlide>
-                        <Banner bannerImage={bannerImage1} />
-                    </SwiperSlide>
-                    {/* <SwiperSlide>
-                        <Banner bannerImage={bannerImage1} />
+                        <Banner bannerImage={bannerImage1} index={activeIndex + 1} person={person3} flag={canFlag} />
                     </SwiperSlide>
                     <SwiperSlide>
-                        <Banner bannerImage={bannerImage2} />
+                        <Banner bannerImage={bannerImage1} index={activeIndex + 1} person={person2} flag={nzFlag} />
                     </SwiperSlide>
                     <SwiperSlide>
-                        <Banner bannerImage={bannerImage3} />
-                    </SwiperSlide> */}
+                        <Banner person={person1} index={activeIndex + 1} bannerImage={bannerImage1} flag={usFlag} />
+                    </SwiperSlide>
                 </Swiper>
                 <div className="custom-pagination flex gap-4 justify-center 2xl:mb-0 xl:mb-0 mb-6">
                     <button className='' onClick={() => goToSlide(0)}>
@@ -96,21 +95,6 @@ const SelectTab = () => {
                             <motion.div
                                 initial={{ backgroundColor: '#D3D3D3' }}
                                 animate={{ backgroundColor: activeIndex === 2 ? '#ff8c3a' : '#D3D3D3' }}
-                                transition={{ duration: 0.3, ease: "easeInOut", delay: 0.01 }}
-                                className='2xl:w-[10px] 2xl:h-[10px] xl:w-[10px] xl:h-[10px] w-[6px] h-[6px] rounded-full'>
-
-                            </motion.div>
-                        </motion.div>
-                    </button>
-                    <button className='' onClick={() => goToSlide(3)}>
-                        <motion.div
-                            initial={{ border: 'none', padding: 12 }}
-                            animate={{ border: activeIndex === 3 ? '1px solid #ff8c3a' : '1px solid #D3D3D3' }}
-                            transition={{ duration: 0.3, ease: "easeInOut", delay: 0.01 }}
-                            className='rounded-full'>
-                            <motion.div
-                                initial={{ backgroundColor: '#D3D3D3' }}
-                                animate={{ backgroundColor: activeIndex === 3 ? '#ff8c3a' : '#D3D3D3' }}
                                 transition={{ duration: 0.3, ease: "easeInOut", delay: 0.01 }}
                                 className='2xl:w-[10px] 2xl:h-[10px] xl:w-[10px] xl:h-[10px] w-[6px] h-[6px] rounded-full'>
 

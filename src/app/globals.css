@@ -50,12 +50,6 @@ html {
   z-index: 40;
 } */
 
-.welcome {
-  border-radius: 4px;
-  border: 1px solid var(--Color-White-Shade-1, #fff);
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-}
 
 /* .banner-text::after {
   content: 'We provide a complete language program and visa processing';
@@ -64,9 +58,6 @@ html {
   @apply 2xl:text-xl xl:text-base text-sm font-semibold banner-text text-white
 } */
 
-.banner-text {
-  color: white;
-}
 
 .footer-main {
   background: var(--333, linear-gradient(180deg, #0b286d 0%, #0f172a 100%));
