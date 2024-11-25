@@ -1,5 +1,6 @@
 import FaTelegram from '@/icons/FaTelegram';
 import React from 'react';
+import TextAnimation from './TextAnimation';
 
 const SectionTitle = ({ subHeading, heading, width }) => {
     return (
@@ -11,12 +12,14 @@ const SectionTitle = ({ subHeading, heading, width }) => {
             </div>
 
             {/* Heading with delay applied via data-aos-delay */}
-            <h1 data-aos="fade-right"
-                data-aos-delay="100"
-                className={`2xl:text-5xl xl:text-5xl text-2xl font-semibold mt-2 2xl:leading-[70px] xl:leading-[70px] text-center mx-auto w-full}`}
-            >
-                <span>{heading}</span>
-            </h1>
+            <TextAnimation>
+                <h1 data-aos="fade-right"
+                    data-aos-delay="100"
+                    className={`2xl:text-5xl xl:text-5xl text-2xl font-semibold mt-2 2xl:leading-[70px] xl:leading-[70px] text-center mx-auto w-full}`}
+                >
+                    <span>{heading}</span>
+                </h1>
+            </TextAnimation>
         </div>
     );
 };

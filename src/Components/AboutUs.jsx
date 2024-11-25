@@ -11,6 +11,7 @@ import FaTicket from '@/icons/FaTicket';
 import Link from 'next/link';
 import { useInView } from 'react-intersection-observer';
 import { motion } from "framer-motion";
+import TextAnimation from './TextAnimation';
 const AboutUs = () => {
     const { ref, inView } = useInView({
         triggerOnce: false, // Trigger animation only once
@@ -57,22 +58,28 @@ const AboutUs = () => {
                     At Uttara International Career Council (UICC)**, we are dedicated to helping individuals unlock their global potential. Established with the vision of empowering students and professionals to pursue their dreams on an international scale, UICC offers a comprehensive range of services designed to guide you toward academic, linguistic, and career success abroad.
                 </p>
                 <div className="flex justify-between 2xl:gap-0 xl:gap-0 gap-6 items-center">
-                    <div className="flex items-center gap-4">
-                        <div className="bg-orange w-fit p-3 rounded-full">
-                            <FaTicket />
+                    <TextAnimation>
+                        <div className="flex items-center gap-4">
+                            <div className="bg-orange w-fit p-3 rounded-full">
+                                <FaTicket />
+                            </div>
+                            <h3 className="2xl:text-xl xl:text-lg font-semibold">Visa Eligibilities</h3>
                         </div>
-                        <h3 className="2xl:text-xl xl:text-lg font-semibold">Visa Eligibilities</h3>
-                    </div>
-                    <div className="flex items-center gap-4">
-                        <div className="bg-orange w-fit p-3 rounded-full">
-                            <FaTicket />
+                    </TextAnimation>
+                    <TextAnimation>
+                        <div className="flex items-center gap-4">
+                            <div className="bg-orange w-fit p-3 rounded-full">
+                                <FaTicket />
+                            </div>
+                            <h3 className="2xl:text-xl xl:text-lg font-semibold">Career Counseling</h3>
                         </div>
-                        <h3 className="2xl:text-xl xl:text-lg font-semibold">Career Counseling</h3>
-                    </div>
+                    </TextAnimation>
                 </div>
                 <div>
                     <Link href={'/signUp'}>
-                        <ButtonPrimary text={'Register Now'} />
+                        <TextAnimation>
+                            <ButtonPrimary text={'Register Now'} />
+                        </TextAnimation>
                     </Link>
                 </div>
             </div>

@@ -15,7 +15,7 @@ const ServiceHistory = ({ count }) => {
                     <h1 ref={ref} className="text-white text-center 2xl:text-5xl xl:text-4xl font-semibold">
                         {
                             inView &&
-                            <CountUp start={40} end={95} duration={1} separator="," suffix='%' />
+                            <CountUp start={40} end={95} duration={2} separator="," suffix='%' />
                         }
                     </h1>
                     <p className="text-white text-center mt-1 2xl:text-2xl xl:text-lg text-xs">Success Rate</p>
@@ -24,7 +24,7 @@ const ServiceHistory = ({ count }) => {
                     <h1 ref={ref} className="text-white text-center 2xl:text-5xl xl:text-4xl font-semibold">
                         {
                             inView &&
-                            <CountUp start={0} end={6} duration={1} separator="," suffix='K' />
+                            <CountUp start={0} end={6} duration={2} separator="," suffix='K' />
                         }
                     </h1>
                     <p className="text-white text-center mt-1 2xl:text-2xl xl:text-lg text-xs">Trusted Clients</p>
@@ -33,7 +33,7 @@ const ServiceHistory = ({ count }) => {
                     <h1 ref={ref} className="text-white text-center 2xl:text-5xl xl:text-4xl font-semibold">
                         {
                             inView &&
-                            <CountUp start={4} end={10} duration={1} separator="," suffix='+' />
+                            <CountUp start={4} end={10} duration={2} separator="," suffix='+' />
                         }
                     </h1>
                     <p className="text-white text-center mt-1 2xl:text-2xl xl:text-lg text-xs">Countries</p>
@@ -42,7 +42,7 @@ const ServiceHistory = ({ count }) => {
                     <h1 className="text-white text-center 2xl:text-5xl xl:text-4xl font-semibold">
                         {
                             inView &&
-                            <CountUp start={20} end={50} duration={1} separator="," suffix='+' />
+                            <CountUp start={20} end={50} duration={2} separator="," suffix='+' />
                         }
                     </h1>
                     <p className="text-white text-center mt-1 2xl:text-2xl xl:text-lg text-xs">Partner universities</p>
