@@ -160,7 +160,7 @@ export default function Slider2() {
                         </motion.div>
                     </motion.div>
                 </button>
-                <button className='' onClick={() => goToSlide(2)}>
+                {/* <button className='' onClick={() => goToSlide(2)}>
                     <motion.div
                         initial={{ border: 'none', padding: 12 }}
                         animate={{ border: activeIndex === 2 ? '1px solid #ff8c3a' : '1px solid #D3D3D3' }}
@@ -189,7 +189,7 @@ export default function Slider2() {
 
                         </motion.div>
                     </motion.div>
-                </button>
+                </button> */}
             </div>
         </div>
     );

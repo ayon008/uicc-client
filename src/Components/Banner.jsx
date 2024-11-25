@@ -4,6 +4,7 @@ import React from 'react';
 import ButtonSecondary from './ButtonSecondary';
 import { TypeAnimation } from 'react-type-animation';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 
 const Banner = ({ bannerImage }) => {
     const MotionImage = motion(Image);
@@ -15,18 +16,21 @@ const Banner = ({ bannerImage }) => {
                     alt="Banner Image"
                     layout="fill"
                     initial={{ transform: 'scale(1)' }}
-                    animate={{ transform: 'scale(1.2)' }}  // Scale the image without affecting the layout
+                    animate={{ transform: 'scale(1.1)' }}  // Scale the image without affecting the layout
                     transition={{ duration: 10, ease: 'easeInOut', repeat: Infinity, repeatType: 'reverse' }}
                     priority
-                    className="w-full h-full object-cover object-center"
+                    className="w-full h-full object-fill z-0"
                 />
+                <div className='absolute inset-0 z-10 bg-gradient-to-r from-white/90 via-white/80 to-white/80'>
+
+                </div>
             </div>
-            <div className='absolute 2xl:w-auto xl:w-auto w-3/4 -translate-y-1/2 h-fit top-1/2 2xl:left-20 xl:left-16 left-1/2 2xl:-translate-x-0 xl:-translate-x-0 -translate-x-1/2 z-50'>
+            {/* <div className='absolute 2xl:w-auto xl:w-auto w-3/4 -translate-y-1/2 h-fit top-1/2 2xl:left-20 xl:left-16 left-1/2 2xl:-translate-x-0 xl:-translate-x-0 -translate-x-1/2 z-50'>
                 <div className="2xl:space-y-16 xl:space-y-10 space-y-6">
                     <div className="w-fit 2xl:mx-0 xl:mx-0 mx-auto rounded-xl border-white p-3 welcome z-50">
                         <h5 className="2xl:text-xl xl:text-base text-sm font-semibold text-white uppercase">Welcome to UICC</h5>
                     </div>
-                    <h1 className="2xl:text-6xl xl:text-5xl text-3xl font-semibold 2xl:text-left xl:text-left text-center banner-text">Transforming mind <br />
+                    <h1 className="2xl:text-6xl xl:text-5xl text-3xl font-semibold 2xl:text-left xl:text-left text-center banner-text color-changing-text">Transforming mind <br />
                         Shaping future</h1>
                     <div className="flex items-center 2xl:justify-normal xl:justify-normal justify-center gap-3">
                         <div className="bg-white w-[8px] 2xl:h-[50px] xl:h-[40px] h-[35px] rounded-xl">
@@ -54,10 +58,12 @@ const Banner = ({ bannerImage }) => {
 
                     </div>
                     <div className='2xl:mx-0 xl:mx-0 mx-auto w-fit'>
-                        <ButtonSecondary text={'Register Now'} />
+                        <Link href={'/signUp'}>
+                            <ButtonSecondary text={'Register Now'} />
+                        </Link>
                     </div>
                 </div>
-            </div>
+            </div> */}
         </div>
     );
 };

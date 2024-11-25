@@ -6,12 +6,20 @@ import ButtonPrimary from './ButtonPrimary';
 import Image from 'next/image';
 import world1 from '../../public/assets/image 22.png'
 import world2 from '../../public/assets/image 22 (1).png'
-import flag2 from '../../public/assets/Image-80 (2).png';
-import flag3 from '../../public/assets/Image-80 (3).png';
-import flag4 from '../../public/assets/Image-80 (4).png';
-import flag6 from '../../public/assets/Image-80 (5).png';
-import flag5 from '../../public/assets/Image-80 (6).png';
-import flag from '../../public/assets/Image-80.png'
+import au from '../../public/assets/au.png'
+import ca from '../../public/assets/ca.png'
+import us from '../../public/assets/us.png'
+import gb from '../../public/assets/gb.png'
+import jp from '../../public/assets/jp.png'
+import nz from '../../public/assets/nz.png'
+import kr from '../../public/assets/kr.png'
+import uk from '../../public/assets/c6cae16cfb0b890601f8050cc179326a.png'
+import usa from '../../public/assets/2ba37f8e6ba6d9af3ea7e40a47287986.png'
+import can from '../../public/assets/6948c86a0fde16ff34c4a0d0e3c15f7e.png'
+import jap from '../../public/assets/1b589b44d0cb35eda74d26ac516e6899.png'
+import sk from '../../public/assets/e4ddbc2dec6441d0cd7eb408b7589d7e.png'
+import nzl from '../../public/assets/82c7acee9c6a83e97829b10c33b06123.png'
+import Link from 'next/link';
 
 const Country = ({ country, flag }) => {
     console.log(country);
@@ -60,7 +68,9 @@ const Country = ({ country, flag }) => {
                                 </li>
                             </ul>
                             <div className='2xl:mt-8 xl:mt-6'>
-                                <ButtonPrimary text={'Register Now'} />
+                                <Link href={'/signUp'}>
+                                    <ButtonPrimary text={'Register Now'} />
+                                </Link>
                             </div>
                         </div>
                         <div>
@@ -110,7 +120,9 @@ const Country = ({ country, flag }) => {
                                     </li>
                                 </ul>
                                 <div className='2xl:mt-8 xl:mt-6 mt-3'>
-                                    <ButtonPrimary text={'Register Now'} />
+                                    <Link href={'/signUp'}>
+                                        <ButtonPrimary text={'Register Now'} />
+                                    </Link>
                                 </div>
                             </div>
                             <div>
@@ -153,7 +165,9 @@ const Country = ({ country, flag }) => {
                                     </li>
                                 </ul>
                                 <div className='2xl:mt-8 xl:mt-6 mt-3'>
-                                    <ButtonPrimary text={'Register Now'} />
+                                    <Link href={'/signUp'}>
+                                        <ButtonPrimary text={'Register Now'} />
+                                    </Link>
                                 </div>
                             </div>
                             <div>
@@ -176,13 +190,13 @@ const Accordion = () => {
 
     // Define accordion items
     const accordionItems = [
-        { title: 'AUstralia', image: world1, flag: flag2 },
-        { title: 'Canada', image: world2, flag: flag },
-        { title: 'USA', image: world1, flag: flag3 },
-        { title: 'UK', image: world1, flag: flag5 },
-        { title: 'New Zealand', image: world1, flag: flag2 },
-        { title: 'JAPAN', image: world1, flag: flag6 },
-        { title: 'South Korea', image: world1, flag: flag4 },
+        { title: 'AUstralia', image: world1, flag: au },
+        { title: 'Canada', image: can, flag: ca },
+        { title: 'USA', image: usa, flag: us },
+        { title: 'UK', image: uk, flag: gb },
+        { title: 'New Zealand', image: nzl, flag: nz },
+        { title: 'JAPAN', image: jap, flag: jp },
+        { title: 'South Korea', image: sk, flag: kr },
     ];
 
     return (
@@ -193,12 +207,12 @@ const Accordion = () => {
                         data-aos-anchor-placement="top-bottom" key={index} className="2xl:flex xl:flex hidden flex-row-reverse border border-[#E8FFFE] h-[400px]">
                         {openIndex !== index && (
                             <button
-                                className={`py-3 h-full font-semibold relative hover:bg-orange transition-all duration-300 ease-in-out 2xl:w-[100px] xl:w-[80px] border-[#E8FFFE]`}
+                                className={`py-3 h-full font-semibold relative hover:scale-110 transition-all duration-300 ease-in-out 2xl:w-[100px] xl:w-[80px] border-[#E8FFFE]`}
                                 onClick={() => toggleAccordion(index)}
                             >
-                                <Image className='h-full' src={item.image} alt={`${item.title}`} />
+                                <Image className='h-full z-40 opacity-60' src={item.image} alt={`${item.title}`} />
                                 <span className='w-fit h-fit vertical z-10 top-10 left-[32%] 2xl:text-3xl xl:text-3xl font-semibold absolute uppercase'>{item.title}</span>
-                                <Image className='absolute bottom-3 left-1/2 -translate-x-1/2' src={item?.flag} alt='' />
+                                <Image className='absolute bottom-3 left-1/2 -translate-x-1/2 rounded-full w-[50px] h-[50px]' src={item?.flag} alt='' />
                             </button>
                         )}
                         <div
@@ -212,11 +226,13 @@ const Accordion = () => {
                         data-aos-anchor-placement="top-bottom" key={index} className="2xl:hidden xl:hidden w-full flex flex-col border border-[#E8FFFE] h-auto">
                         {openIndex !== index && (
                             <button
-                                className={`py-3 font-semibold relative hover:bg-orange transition-all duration-300 ease-in-out border-[#E8FFFE]`}
+                                className={`py-4 font-semibold relative hover:scale-110 transition-all duration-300 ease-in-out border-[#E8FFFE]`}
                                 onClick={() => toggleAccordion(index)}
                             >
-                                <div className='flex items-center justify-between w-full px-6'>
-                                    <h1 className='w-fit h-fit 2xl:text-3xl xl:text-3xl font-semibold uppercase'>{item.title}</h1>                                                 <Image className='' src={item?.flag} alt='' />
+                                <div className='flex items-center justify-between w-full px-6 relative'>
+                                    <h1 className='w-fit h-fit 2xl:text-3xl xl:text-3xl font-semibold uppercase z-30'>{item.title}</h1>
+                                    <Image className='rounded-full w-[50px] h-[50px] z-30' src={item?.flag} alt='' />
+                                    <Image className='h-full opacity-60 absolute inset-0 z-10' src={item.image} alt={`${item.title}`} />
                                 </div>
                             </button>
                         )}

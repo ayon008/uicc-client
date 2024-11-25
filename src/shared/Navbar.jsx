@@ -14,12 +14,15 @@ import Link from 'next/link';
 import DropDown from '@/icons/DrowDown';
 import { motion } from "framer-motion";
 import { usePathname } from 'next/navigation';
+import { GiHamburgerMenu } from 'react-icons/gi';
+import { AiOutlineClose } from 'react-icons/ai';
+import { FaFacebook, FaFacebookSquare, FaLinkedinIn, FaTwitterSquare, FaWhatsappSquare } from 'react-icons/fa';
 
 const Navbar = () => {
     const [scrolled, setScrolled] = useState(false);
     const pathname = usePathname();
     console.log(scrolled);
-
+    const [open, setOpen] = useState(false);
 
     useEffect(() => {
         let lastScrollTop = 0;
@@ -34,6 +37,20 @@ const Navbar = () => {
             window.removeEventListener('scroll', handleScroll);
         };
     }, []);
+
+    useEffect(() => {
+        // Disable scrolling on the body when the menu is open
+        if (open) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = '';
+        }
+
+        // Cleanup on unmount
+        return () => {
+            document.body.style.overflow = '';
+        };
+    }, [open]);
 
     const navItems = <>
         <li className={`2xl:text-xl xl:text-base text-sm font-semibold hover:text-orange transition-all duration-100 ${pathname === '/' ? 'text-orange' : ''}`}>
@@ -153,15 +170,57 @@ const Navbar = () => {
                                 {navItems}
                             </ul>
                         </div>
-                        <div className='w-fit 2xl:block xl:block hidden'>
-                            <button className="rounded-[30px] flex items-center btn text-white bg-orange 2xl:text-lg xl:text-base text-sm">
-                                <MdSearch size={24} color="white" />
-                                <span>Search</span>
-                            </button>
+                        <div className='hidden items-center gap-6 2xl:flex xl:flex'>
+                            <div className='w-fit'>
+                                <button className="rounded-[30px] flex items-center btn text-orange bg-red-100 btn-outline 2xl:text-lg xl:text-base text-sm">
+                                    <MdSearch size={24} color="#c6250c" />
+                                    <span>Search</span>
+                                </button>
+                            </div>
+                            <div className='btn' onClick={() => setOpen(!open)}>
+                                <GiHamburgerMenu size={'1.5rem'} />
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <motion.div
+                initial={{ left: -1000 }}
+                animate={{ left: open ? 0 : -1000 }}
+                transition={{ duration: 0.5, ease: "easeInOut", delay: 0.00 }}
+                className='h-screen flex items-stretch fixed top-0 bottom-0 overflow-auto z-[60] w-full'
+            >
+                <div className='w-[35%] h-full bg-[#FFFFFF] relative overflow-y-auto pb-10'>
+                    <div className='w-fit h-fit absolute top-6 right-6 btn' onClick={() => setOpen(!open)}>
+                        <AiOutlineClose size={'1.5rem'} />
+                    </div>
+                    <div className='mt-20 w-fit mx-auto flex items-center gap-3'>
+                        <Image className='2xl:w-[140px] xl:w-[140px] w-[70px] 2xl:h-[110px] xl:h-[110px] h-auto object-contain' src={logo} alt='logo' />
+                        <div>
+                            <h3 className='text-base text-orange'>Language Institute</h3>
+                            <h1 className='text-deep-blue text-xl font-semibold'>Student Agency</h1>
+                        </div>
+                    </div>
+                    <div className="mt-10 px-6">
+                        <h3 className='text-center text-xl text-deep-blue font-semibold'>About Us</h3>
+                        <p className='text-base mt-6 text-center'>
+                            <span className='text-deep-blue font-semibold text-base'>UICC</span> helps students achieve their study abroad dreams with expert guidance on admissions, visas, and language training to ensure success in their academic journey.
+                        </p>
+                        <h2 className='text-2xl font-semibold text-center mt-8'>Contact Us</h2>
+                        <p className='mt-3 text-center'>info@uttara.com</p>
+                        <p className='mt-3 text-center'>+880-195837780</p>
+                        <div className='flex items-center justify-center gap-6 mt-6'>
+                            <FaFacebookSquare size={'1.5rem'} />
+                            <FaLinkedinIn size={'1.5rem'} />
+                            <FaWhatsappSquare size={'1.5rem'} />
+                            <FaTwitterSquare size={'1.5rem'} />
+                        </div>
+                    </div>
+                </div>
+                {
+                    open && <div className='flex-1 h-full bg-black opacity-30' onClick={() => setOpen(!open)}></div>
+                }
+            </motion.div>
             <motion.div
                 initial={{ top: -2000 }}
                 animate={{ top: scrolled ? 0 : -200 }}
@@ -169,11 +228,6 @@ const Navbar = () => {
                 className={`bg-[#FBFCFF] shadow-xl fixed right-0 left-0 z-50`}
             >
                 <div className='flex 2xl:h-[100px] xl:h-[100px] h-[50px] items-center justify-between  max-w-[1440px] mx-auto relative 2xl:py-10 xl:py-10 2xl:px-11 xl:px-11 px-4'>
-                    {/* <div className='absolute top-0 2xl:left-11 xl:left-11 left-5'>
-                        <div className='nav-start bg-white shadow-xl'>
-                            <Image className='2xl:w-[140px] xl:w-[140px] w-[70px] 2xl:h-[110px] xl:h-[110px] h-auto object-contain' src={logo} alt='logo' />
-                        </div>
-                    </div> */}
                     <div className='absolute top-0 2xl:left-11 xl:left-11 left-5'>
                         <div className='nav-start bg-white shadow-xl'>
                             <Image className='2xl:w-[140px] xl:w-[140px] w-[70px] 2xl:h-[110px] xl:h-[110px] h-auto object-contain' src={logo} alt='logo' />
@@ -210,11 +264,16 @@ const Navbar = () => {
                             {navItems}
                         </ul>
                     </div>
-                    <div className='w-fit 2xl:block xl:block hidden'>
-                        <button className="rounded-[30px] flex items-center btn text-white bg-orange 2xl:text-lg xl:text-base text-sm">
-                            <MdSearch size={24} color="white" />
-                            <span>Search</span>
-                        </button>
+                    <div className='hidden items-center gap-6 2xl:flex xl:flex'>
+                        <div className='w-fit'>
+                            <button className="rounded-[30px] flex items-center btn text-orange bg-red-100 btn-outline 2xl:text-lg xl:text-base text-sm">
+                                <MdSearch size={24} color="#c6250c" />
+                                <span>Search</span>
+                            </button>
+                        </div>
+                        <div className='btn' onClick={() => setOpen(!open)}>
+                            <GiHamburgerMenu size={'1.5rem'} />
+                        </div>
                     </div>
                 </div>
             </motion.div>

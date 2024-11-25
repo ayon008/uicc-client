@@ -8,8 +8,8 @@ import 'swiper/css/navigation';
 // import required modules
 import { Autoplay, Navigation } from 'swiper/modules';
 import Banner from './Banner';
-import bannerImage from '@/../public/assets/vasily-koloda-8CqDvPuo_kI-unsplash.jpg'
-import bannerImage1 from '../../public/assets/Student Visa.png'
+import bannerImage from '../../public/assets/pexels-apasaric-618079.jpg'
+import bannerImage1 from '../../public/assets/pexels-lkloeppel-466685.jpg'
 import bannerImage2 from '../../public/assets/Family VISA.png'
 import bannerImage3 from '../../public/assets/Worker VISA.png'
 import Aos from 'aos';
@@ -44,9 +44,9 @@ const SelectTab = () => {
                     modules={[Navigation, Autoplay]} // Include Autoplay in modules
                     className="mySwiper 2xl:mt-10 xl:mt-10 mt-0 overflow-hidden">
                     <SwiperSlide>
-                        <Banner bannerImage={bannerImage} />
+                        <Banner bannerImage={bannerImage1} />
                     </SwiperSlide>
-                    <SwiperSlide>
+                    {/* <SwiperSlide>
                         <Banner bannerImage={bannerImage1} />
                     </SwiperSlide>
                     <SwiperSlide>
@@ -54,7 +54,7 @@ const SelectTab = () => {
                     </SwiperSlide>
                     <SwiperSlide>
                         <Banner bannerImage={bannerImage3} />
-                    </SwiperSlide>
+                    </SwiperSlide> */}
                 </Swiper>
                 <div className="custom-pagination flex gap-4 justify-center 2xl:mb-0 xl:mb-0 mb-6">
                     <button className='' onClick={() => goToSlide(0)}>

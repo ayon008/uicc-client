@@ -1,4 +1,4 @@
-import { Montserrat } from 'next/font/google'
+import { Montserrat, PT_Serif } from 'next/font/google'
 import "./globals.css";
 import Navbar from '@/shared/Navbar';
 import Footer from '@/shared/Footer';
@@ -18,13 +18,17 @@ export const montserrat = Montserrat({
   weight: ['400', '500', '600', '700'],
 })
 
+export const serif = PT_Serif({
+  subsets: ['latin'],
+  weight: ['400', '700'],
+})
 
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`antialiased ${montserrat.className}`}
+        className={`antialiased ${serif.className}`}
       >
         <main className='max-w-[1920px] mx-auto min-h-screen'>
           <AOSProvider>

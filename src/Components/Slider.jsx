@@ -4,6 +4,7 @@ import React, { useRef, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import slider1 from '../../public/assets/1135dacc92653527eec563091064a4a9.png'
 import slider2 from '../../public/assets/becca-tapert-GnY_mW1Q6Xc-unsplash.jpg'
+import slider3 from '../../public/assets/718c891810c4b8377897ff48beb7d29e.jpeg'
 import { motion } from "framer-motion";
 // Import Swiper styles
 import 'swiper/css';
@@ -11,6 +12,8 @@ import 'swiper/css';
 // import required modules
 import { Navigation, Pagination } from 'swiper/modules';
 import Image from 'next/image';
+import { ButtonTerTiary } from '@/app/page';
+import Link from 'next/link';
 
 export default function Slider() {
     const swiperRef = useRef(null);
@@ -39,20 +42,59 @@ export default function Slider() {
                 <SwiperSlide>
                     <div className='relative'>
                         <Image className='w-full max-h-[600px] xl:h-[550px] 2xl:h-[600px] h-[300px] object-fill' src={slider1} alt='' />
-                        <div className='absolute bottom-0 w-1/2 left-0 bg-orange 2xl:py-6 xl:py-6 py-4 2xl:px-12 xl:px-12 px-6'>
-                            <p className='text-white 2xl:text-xl xl:text-lg text-[8px]'>
-                                “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam”
-                            </p>
-                            <h3 className='2xl:mt-6 xl:mt-6 mt-2 font-semibold 2xl:text-3xl xl:text-2xl text-base text-white'>Ronald Richards</h3>
-                            <p className='2xl:mt-2 xl:mt-2 mt-[3px] 2xl:text-2xl xl:text-xl text-[10px] font-medium text-white'>Saint Vincent and the Grenadines</p>
+                        <div className='absolute bottom-0 w-1/2 left-0 bg-orange 2xl:py-6 xl:py-6 py-2 2xl:px-12 xl:px-12 px-3'>
+                            <h3 className='2xl:mt-6 xl:mt-6 my-3 font-semibold 2xl:text-3xl xl:text-2xl text-[10px] text-white'>IELTS Regular Programme</h3>
+                            <p className='2xl:my-4 xl:my-4 my-3 2xl:text-2xl xl:text-xl font-medium text-[7px] text-white'>The IELTS Regular Programme helps students improve their English skills for the IELTS exam, focusing on speaking, listening, reading, and writing. It offers practice tests and expert guidance to achieve desired scores for study, work, or immigration.</p>
+                            <div className='2xl:w-1/2 xl:w-1/2 w-full'>
+                                <Link href={'/signUp'}>
+                                    <ButtonTerTiary text={'Register Now'} width={9} height={8} />
+                                </Link>
+                            </div>
                         </div>
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <Image className='w-full max-h-[600px] xl:h-[550px] 2xl:h-[600px] h-[300px] object-fill' src={slider2} alt='' />
+                    <div className='relative'>
+                        <Image className='w-full max-h-[600px] xl:h-[550px] 2xl:h-[600px] h-[300px] object-fill' src={slider2} alt='' />
+                        <div className='absolute bottom-0 w-1/2 left-0 bg-orange 2xl:py-6 xl:py-6 py-2 2xl:px-12 xl:px-12 px-3'>
+                            <h3 className='2xl:mt-6 xl:mt-6 my-3 font-semibold 2xl:text-3xl xl:text-2xl text-[10px] text-white'>Visa Processing</h3>
+                            <p className='2xl:my-4 xl:my-4 my-3 2xl:text-2xl xl:text-xl font-medium text-[7px] text-white'>We provide expert assistance with student, work, family, and tourist visa applications. Our services include guidance on documentation, application processing, and interview preparation to ensure a smooth and successful visa experience.</p>
+                            <div className='2xl:w-1/2 xl:w-1/2 w-full'>
+                                <Link href={'/signUp'}>
+                                    <ButtonTerTiary text={'Register Now'} width={9} height={8} />
+                                </Link>
+                            </div>
+                        </div>
+                    </div>
                 </SwiperSlide>
-                <SwiperSlide>Slide 3</SwiperSlide>
-                <SwiperSlide>Slide 4</SwiperSlide>
+                <SwiperSlide>
+                    <div className='relative'>
+                        <Image className='w-full max-h-[600px] xl:h-[550px] 2xl:h-[600px] h-[300px] object-cover object-top' src={slider3} alt='' />
+                        <div className='absolute bottom-0 w-1/2 left-0 bg-orange 2xl:py-6 xl:py-6 py-2 2xl:px-12 xl:px-12 px-3'>
+                            <h3 className='2xl:mt-6 xl:mt-6 my-3 font-semibold 2xl:text-3xl xl:text-2xl text-[10px] text-white'>Air Ticket</h3>
+                            <p className='2xl:my-4 xl:my-4 my-3 2xl:text-2xl xl:text-xl font-medium text-[7px] text-white'>We offer reliable air ticket booking services, ensuring affordable prices, flexible options, and hassle-free travel arrangements for domestic and international flights.</p>
+                            <div className='2xl:w-1/2 xl:w-1/2 w-full'>
+                                <Link href={'/signUp'}>
+                                    <ButtonTerTiary text={'Register Now'} width={9} height={8} />
+                                </Link>
+                            </div>
+                        </div>
+                    </div>
+                </SwiperSlide>
+                {/* <SwiperSlide>
+                    <div className='relative'>
+                        <Image className='w-full max-h-[600px] xl:h-[550px] 2xl:h-[600px] h-[300px] object-cover object-top' src={slider3} alt='' />
+                        <div className='absolute bottom-0 w-1/2 left-0 bg-orange 2xl:py-6 xl:py-6 py-2 2xl:px-12 xl:px-12 px-3'>
+                            <h3 className='2xl:mt-6 xl:mt-6 my-3 font-semibold 2xl:text-3xl xl:text-2xl text-[10px] text-white'>Air Ticket</h3>
+                            <p className='2xl:my-4 xl:my-4 my-3 2xl:text-2xl xl:text-xl font-medium text-[7px] text-white'>We offer reliable air ticket booking services, ensuring affordable prices, flexible options, and hassle-free travel arrangements for domestic and international flights.</p>
+                            <div className='2xl:w-1/2 xl:w-1/2 w-full'>
+                                <Link href={'/signUp'}>
+                                    <ButtonTerTiary text={'Register Now'} width={9} height={8} />
+                                </Link>
+                            </div>
+                        </div>
+                    </div>
+                </SwiperSlide> */}
                 <div className="custom-next swiper-button-next">
                     <div className='bg-white px-3 rounded-full cursor-pointer'>
                         <svg className='' xmlns="http://www.w3.org/2000/svg" width="24" height="49" viewBox="0 0 24 49" fill="none">
@@ -114,7 +156,7 @@ export default function Slider() {
                         </motion.div>
                     </motion.div>
                 </button>
-                <button className='' onClick={() => goToSlide(3)}>
+                {/* <button className='' onClick={() => goToSlide(3)}>
                     <motion.div
                         initial={{ border: 'none', padding: 12 }}
                         animate={{ border: activeIndex === 3 ? '1px solid #ff8c3a' : '1px solid #D3D3D3' }}
@@ -128,7 +170,7 @@ export default function Slider() {
 
                         </motion.div>
                     </motion.div>
-                </button>
+                </button> */}
             </div>
         </div>
     );

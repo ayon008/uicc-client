@@ -7,6 +7,7 @@ import image from '../../public/assets/image (1).png'
 import img1 from '../../public/assets/1.png'
 import img2 from '../../public/assets/2.png'
 import FaTicket from '@/icons/FaTicket';
+import Link from 'next/link';
 
 const AboutUs = () => {
     return (
@@ -29,7 +30,7 @@ const AboutUs = () => {
                 <p className="">
                     At Uttara International Career Council (UICC)**, we are dedicated to helping individuals unlock their global potential. Established with the vision of empowering students and professionals to pursue their dreams on an international scale, UICC offers a comprehensive range of services designed to guide you toward academic, linguistic, and career success abroad.
                 </p>
-                <div className="flex justify-between items-center">
+                <div className="flex justify-between 2xl:gap-0 xl:gap-0 gap-6 items-center">
                     <div className="flex items-center gap-4">
                         <div className="bg-orange w-fit p-3 rounded-full">
                             <FaTicket />
@@ -44,7 +45,9 @@ const AboutUs = () => {
                     </div>
                 </div>
                 <div>
-                    <ButtonPrimary text={'Register Now'} />
+                    <Link href={'/signUp'}>
+                        <ButtonPrimary text={'Register Now'} />
+                    </Link>
                 </div>
             </div>
         </div>
