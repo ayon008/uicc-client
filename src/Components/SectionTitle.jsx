@@ -8,7 +8,11 @@ const SectionTitle = ({ subHeading, heading, width }) => {
             {/* Subheading with AOS animation */}
             <div data-aos="fade-right" className="flex items-center justify-center gap-2">
                 <FaTelegram />
-                <h2 className="2xl:text-2xl xl:text-xl font-semibold">{subHeading}</h2>
+                <h2 className="2xl:text-2xl xl:text-xl font-semibold">
+                    <TextAnimation>
+                        {subHeading}
+                    </TextAnimation>
+                </h2>
             </div>
 
             {/* Heading with delay applied via data-aos-delay */}

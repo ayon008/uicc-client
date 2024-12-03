@@ -204,13 +204,13 @@ const Accordion = () => {
             {accordionItems.map((item, index) => (
                 <>
                     <div data-aos="fade-up"
-                        data-aos-anchor-placement="top-bottom" key={index} className="2xl:flex xl:flex hidden flex-row-reverse border border-[#E8FFFE] h-[400px]">
+                        data-aos-anchor-placement="top-bottom" key={index} className="2xl:flex xl:flex hidden flex-row-reverse border border-[#E8FFFE] h-[500px]">
                         {openIndex !== index && (
                             <button
-                                className={`py-3 h-full font-semibold relative hover:scale-110 transition-all duration-300 ease-in-out 2xl:w-[100px] xl:w-[80px] border-[#E8FFFE]`}
+                                className={`py-3 h-full font-semibold relative hover:scale-110 transition-all duration-300 ease-in-out flex-1 count text-white 2xl:min-w-[100px] xl:min-w-[80px] border-[#E8FFFE]`}
                                 onClick={() => toggleAccordion(index)}
                             >
-                                <Image className='h-full z-40 opacity-60' src={item.image} alt={`${item.title}`} />
+                                {/* <Image className='h-full z-40 opacity-60' src={item.image} alt={`${item.title}`} /> */}
                                 <span className='w-fit h-fit vertical z-10 top-10 left-[32%] 2xl:text-3xl xl:text-3xl font-semibold absolute uppercase'>{item.title}</span>
                                 <Image className='absolute bottom-3 left-1/2 -translate-x-1/2 rounded-full w-[50px] h-[50px]' src={item?.flag} alt='' />
                             </button>

@@ -1,5 +1,5 @@
 'use client'
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useRef, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { motion } from "framer-motion";
 // Import Swiper styles
@@ -34,7 +34,7 @@ const SelectTab = () => {
 
     return (
         <div>
-            <div className='2xl:mt-[100px] xl:mt-[100px] mt-0 sliders'>
+            <div className='2xl:mt-[100px] xl:mt-[100px] mt-0 sliders relative'>
                 <Swiper
                     ref={swiperRef}
                     pagination={{ clickable: true }}
@@ -59,12 +59,12 @@ const SelectTab = () => {
                     <button className='' onClick={() => goToSlide(0)}>
                         <motion.div
                             initial={{ border: 'none', padding: 12 }}
-                            animate={{ border: activeIndex === 0 ? '1px solid #ff8c3a' : '1px solid #D3D3D3' }}
+                            animate={{ border: activeIndex === 0 ? '1px solid #f87171' : '1px solid #D3D3D3' }}
                             transition={{ duration: 0.3, ease: "easeInOut", delay: 0.01 }}
                             className='rounded-full'>
                             <motion.div
                                 initial={{ backgroundColor: '#D3D3D3' }}
-                                animate={{ backgroundColor: activeIndex === 0 ? '#ff8c3a' : '#D3D3D3' }}
+                                animate={{ backgroundColor: activeIndex === 0 ? '#f87171' : '#D3D3D3' }}
                                 transition={{ duration: 0.3, ease: "easeInOut", delay: 0.01 }}
                                 className='2xl:w-[10px] 2xl:h-[10px] xl:w-[10px] xl:h-[10px] w-[6px] h-[6px] rounded-full'>
 
@@ -74,12 +74,12 @@ const SelectTab = () => {
                     <button className='' onClick={() => goToSlide(1)}>
                         <motion.div
                             initial={{ border: 'none', padding: 12 }}
-                            animate={{ border: activeIndex === 1 ? '1px solid #ff8c3a' : '1px solid #D3D3D3' }}
+                            animate={{ border: activeIndex === 1 ? '1px solid #f87171' : '1px solid #D3D3D3' }}
                             transition={{ duration: 0.3, ease: "easeInOut", delay: 0.01 }}
                             className='rounded-full'>
                             <motion.div
                                 initial={{ backgroundColor: '#D3D3D3' }}
-                                animate={{ backgroundColor: activeIndex === 1 ? '#ff8c3a' : '#D3D3D3' }}
+                                animate={{ backgroundColor: activeIndex === 1 ? '#f87171' : '#D3D3D3' }}
                                 transition={{ duration: 0.3, ease: "easeInOut", delay: 0.01 }}
                                 className='2xl:w-[10px] 2xl:h-[10px] xl:w-[10px] xl:h-[10px] w-[6px] h-[6px] rounded-full'>
 
@@ -89,12 +89,12 @@ const SelectTab = () => {
                     <button className='' onClick={() => goToSlide(2)}>
                         <motion.div
                             initial={{ border: 'none', padding: 12 }}
-                            animate={{ border: activeIndex === 2 ? '1px solid #ff8c3a' : '1px solid #D3D3D3' }}
+                            animate={{ border: activeIndex === 2 ? '1px solid #f87171' : '1px solid #D3D3D3' }}
                             transition={{ duration: 0.3, ease: "easeInOut", delay: 0.01 }}
                             className='rounded-full'>
                             <motion.div
                                 initial={{ backgroundColor: '#D3D3D3' }}
-                                animate={{ backgroundColor: activeIndex === 2 ? '#ff8c3a' : '#D3D3D3' }}
+                                animate={{ backgroundColor: activeIndex === 2 ? '#f87171' : '#D3D3D3' }}
                                 transition={{ duration: 0.3, ease: "easeInOut", delay: 0.01 }}
                                 className='2xl:w-[10px] 2xl:h-[10px] xl:w-[10px] xl:h-[10px] w-[6px] h-[6px] rounded-full'>
 
@@ -103,19 +103,19 @@ const SelectTab = () => {
                     </button>
                 </div>
                 <div className={'grid grid-cols-5'}>
-                    <Link href={'/language-training'} className={`border-deep-blue text-deep-blue cursor-pointer 2xl:py-6 xl:py-4 py-2 text-center border-2 bg-white font-semibold 2xl:text-2xl xl:text-lg text-[8px]`} >
+                    <Link href={'/language-training'} className={`border-[0.1px] border-[#E5E7EB] text-deep-blue cursor-pointer 2xl:py-6 xl:py-4 py-2 text-center hover:bg-deep-blue hover:text-white transition-all duration-300 ease-linear font-semibold 2xl:text-2xl xl:text-lg text-[8px]`} >
                         Language Training
                     </Link>
-                    <Link href={'/career-counseling'} className={`border-deep-blue text-deep-blue cursor-pointer 2xl:py-6 xl:py-4 py-2 text-center border-2 bg-white font-semibold 2xl:text-2xl xl:text-lg text-[8px]`} >
+                    <Link href={'/career-counseling'} className={`border-[0.1px] border-[#E5E7EB] text-deep-blue cursor-pointer 2xl:py-6 xl:py-4 py-2 text-center hover:bg-deep-blue hover:text-white transition-all duration-300 ease-linear font-semibold 2xl:text-2xl xl:text-lg text-[8px]`} >
                         Career Counseling
                     </Link>
-                    <Link href={'/visa-processing'} className={`border-deep-blue text-deep-blue cursor-pointer 2xl:py-6 xl:py-4 py-2 text-center border-2 bg-white font-semibold 2xl:text-2xl xl:text-lg text-[8px]`} >
+                    <Link href={'/visa-processing'} className={`border-[0.1px] border-[#E5E7EB] text-deep-blue cursor-pointer 2xl:py-6 xl:py-4 py-2 text-center hover:bg-deep-blue hover:text-white transition-all duration-300 ease-linear font-semibold 2xl:text-2xl xl:text-lg text-[8px]`} >
                         Visa Processing
                     </Link>
-                    <Link href={'/air-ticket'} className={`border-deep-blue text-deep-blue cursor-pointer 2xl:py-6 xl:py-4 text-center py-2 border-2 bg-white font-semibold 2xl:text-2xl xl:text-lg text-[8px]`} >
+                    <Link href={'/air-ticket'} className={`border-[0.1px] border-[#E5E7EB] text-deep-blue cursor-pointer 2xl:py-6 xl:py-4 text-center py-2 hover:bg-deep-blue hover:text-white transition-all duration-300 ease-linear font-semibold 2xl:text-2xl xl:text-lg text-[8px]`} >
                         Air Ticketing
                     </Link>
-                    <Link href={'/'} className={`border-deep-blue text-deep-blue cursor-pointer 2xl:py-6 xl:py-4 text-center py-2 border-2 bg-white font-semibold 2xl:text-2xl xl:text-lg text-[8px]`}>
+                    <Link href={'/'} className={`border-[0.1px] border-[#E5E7EB] text-deep-blue cursor-pointer 2xl:py-6 xl:py-4 text-center py-2 hover:bg-deep-blue hover:text-white transition-all duration-300 ease-linear font-semibold 2xl:text-2xl xl:text-lg text-[8px]`}>
                         Training Center
                     </Link>
                 </div>

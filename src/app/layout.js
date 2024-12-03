@@ -5,6 +5,7 @@ import Footer from '@/shared/Footer';
 import AuthProvider from '@/Provider/AuthProvider';
 import AOSProvider from '@/Provider/AOSProvider';
 import ScrollTopBtn from '@/Components/ScrollTopBtn';
+import LoadingProvider from '@/Provider/LoadingProvider';
 
 
 export const metadata = {
@@ -33,12 +34,12 @@ export default function RootLayout({ children }) {
         <main className='max-w-[1920px] mx-auto min-h-screen'>
           <AOSProvider>
             <AuthProvider>
-              <Navbar />
-              {children}
-              <div className='fixed 2xl:bottom-28 xl:bottom-28 2xl:right-16 xl:right-16 bottom-10 right-8 z-50'>
-                <ScrollTopBtn />
-              </div>
-              <Footer />
+              <LoadingProvider>
+                {children}
+                <div className='fixed 2xl:bottom-28 xl:bottom-28 2xl:right-16 xl:right-16 bottom-10 right-8 z-50'>
+                  <ScrollTopBtn />
+                </div>
+              </LoadingProvider>
             </AuthProvider>
           </AOSProvider>
         </main>

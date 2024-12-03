@@ -110,7 +110,7 @@ export default function Slider() {
                     </div>
                 </div>
             </Swiper>
-            <div className="custom-pagination flex gap-4 justify-center mt-4">
+            <div className="custom-pagination-1 flex gap-4 justify-center mt-4">
                 <button className='' onClick={() => goToSlide(0)}>
                     <motion.div
                         initial={{ border: 'none', padding: 12 }}

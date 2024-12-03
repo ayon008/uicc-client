@@ -12,6 +12,8 @@ import Link from 'next/link';
 import { useInView } from 'react-intersection-observer';
 import { motion } from "framer-motion";
 import TextAnimation from './TextAnimation';
+import CircularProgressBar from './AnimatedProgress';
+import HalfCircleProgressBar from './AnimatedProgress';
 const AboutUs = () => {
     const { ref, inView } = useInView({
         triggerOnce: false, // Trigger animation only once
@@ -44,6 +46,9 @@ const AboutUs = () => {
                         className='absolute -left-14 bottom-28'>
                         <Image className="" src={img2} alt="" />
                     </motion.div>
+                    <div className='bg-white w-fit h-[200px] absolute right-0 -bottom-10'>
+                        <HalfCircleProgressBar progress={75} size={300} />
+                    </div>
                 </div>
             </div>
             <div data-aos="fade-left" className="flex flex-col justify-between 2xl:space-y-0 xl:space-y-0 space-y-6">
